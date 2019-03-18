@@ -1,0 +1,7 @@
+/**product.wxss**/
+.stores{margin-top:20px;width: 100%;}
+.stores_01{width: 100%;display: block;position: relative;}
+.stores_01 image{width: 100%;display: block}
+.stores_01 text{position: absolute;bottom: 0;left: 0;width: 100%;line-height: 40px;height: 40px;background: rgba(0,0,0,0.6);text-align: center;color: #fff;font-size: 16px;}
+.stores_02{width: 100%;margin-top: 10px}
+.stores_02 video{width:750rpx;display: block}

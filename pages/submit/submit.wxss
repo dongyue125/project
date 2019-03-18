@@ -1,0 +1,9 @@
+/**product.wxss**/
+.productshow{width: 100%;border-bottom: 5px #f4f4f4 solid;padding: 15px 0;line-height:1.5}
+.productshow text{display: block}
+.productshow_02 text{display:initial;font-size: 12px}
+.productshow_02 text:nth-of-type(1){color: #acacac;float: left}
+.productshow_02 text:nth-of-type(2){color: #313131;float: right}
+.submit_01 text:nth-of-type(1){color: #000;font-size: 16px}
+.submit_01 text:nth-of-type(2){color:#cf0f11;font-size: 16px}
+.querzf{position: fixed;width: 100%;text-align: center;font-size: 14px;line-height: 40px;height: 40px;background: #000;color: #fff;bottom: 0;left: 0}

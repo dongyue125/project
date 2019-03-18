@@ -1,0 +1,26 @@
+/**product.wxss**/
+.productshow{width: 100%;border-bottom: 5px #f4f4f4 solid;padding: 15px 0;line-height:1.5}
+.productshow_03 .center{display: flex}
+.productshow text{display: block}
+.productshow_03 text{font-size: 12px;color: #666;padding: 0 10px;box-sizing:border-box;flex: 1}
+.productshow_03 icon{font-size: 36px;width: 36px}
+.productshow_03 icon:last-child{width: 36px}
+.buy_01{display: flex;padding:15px;box-sizing:border-box;}
+.buy_img{width: 165px}
+.buy_img image{width: 100%;display: block}
+.buy_con{flex: 1;padding-left: 10px}
+.buy_con text:nth-of-type(1){font-size: 14px;color: #444;margin-top: 10px}
+.buy_con text:nth-of-type(2){font-size: 12px;color: #acacac;}
+.buy_con text:nth-of-type(3){font-size: 12px;color: #444;margin-top: 10px}
+.buy_price text{display: inline-block}
+.buy_con .buy_price text{font-size: 13px;}
+.buy_03{padding: 0}
+.buy_03 button{float: right;width: 130px;height: 45px;line-height: 45px;background: #000;color: #fff;text-align: center;border-radius: 0;font-size: 14px}
+.buy_03 .jiage{float:right;line-height: 45px;font-size: 14px;margin-right: 10px;color: #666}
+.buy_03 .suliang{float: right;line-height: 45px;font-size: 14px;font-weight: bold;}
+.spellgroup_01 text:nth-of-type(1){font-size: 16px;border-bottom: 1px #ddd solid;margin-bottom: 5px;padding-bottom: 5px}
+.spellgroup_01 text:nth-of-type(2){font-size: 13px;color: #cf0f11;}
+.spellgroup{width:100%;overflow: hidden;}
+/*.spellgroup text{width: 33.333%;float: left;display: block;font-size: 13px;line-height: 40px;height: 40px;text-align: center}*/
+.spellgroup image{width: 100%}
+.spellgrouporder{border-top: 10px #f4f4f4 solid;}

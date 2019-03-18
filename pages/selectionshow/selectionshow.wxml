@@ -1,0 +1,26 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text class='htz' catchtap="showhistory">发展历程</rich-text>
+      <rich-text class='htz' catchtap="showlife">企业生活</rich-text>
+      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
+    </view>
+    <text>{{classname}}</text>
+    <view>
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+  </view>
+  <view class='selectionshow'>
+    <view class='center'>
+      <text class='htz'>{{title}}</text>
+      <text>{{content}}</text>
+    </view>
+  </view>
+  <view class='selectionshow_01'>
+    <video src='{{vurl}}' poster='{{picurl}}'></video>
+  </view>
+</view>
+<include src="../footer/footer.wxml"/>

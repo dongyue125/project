@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ddk/ddk",
+    "pages/subscribe/subscribe",
+    "pages/custom/custom",
+    "pages/spellgrouporder/spellgrouporder",
+    "pages/groupshare/groupshare",
+    "pages/spellgroup/spellgroup",
+    "pages/exclusive/exclusive",
+    "pages/distribution/distribution",
+    "pages/complete/complete",
+    "pages/topup/topup",
+    "pages/personal/personal",
+    "pages/vieworder/vieworder",
+    "pages/pay/pay",
+	"pages/cart/cart",
+	"pages/buycart/buycart",
+	
+    "pages/submit/submit",
+    "pages/buy/buy",
+    "pages/wash/wash",
+    "pages/stores/stores",
+    "pages/selectionshow/selectionshow",
+    "pages/selection/selection",
+    "pages/history/history",
+    "pages/recommended/recommended",
+    "pages/recruiting/recruiting",
+    "pages/cooperation/cooperation",
+    "pages/life/life",
+    "pages/productshow/productshow",
+    "pages/product/product",
+    "pages/daren/daren",
+    "pages/header/header",
+    "pages/footer/footer",
+    "pages/foot/foot"
+
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "辽宁丰雷定制科技有限公司",
+    "navigationBarTextStyle": "white"
+  }
+}

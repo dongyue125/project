@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class="fldz">
+    <view class="fldz_01" catchtap="showdaren">
+      <text class='htz'>{{content}}</text>
+      <text class='gengduo'>更多视频</text>
+    </view>
+    <video src='{{vurl}}' poster='{{vpic}}'></video>
+  </view>
+  <view class='ddk'>
+    <view class='htz ddk_01'>
+    {{dtitle}}
+    </view>
+    <view class='ddk_02' catchtap="showddk">
+      <image src='{{dpic}}' mode="widthFix"></image>
+    </view>
+  </view>
+  <view class='qysh'>
+    <view class='qysh_01' catchtap="showlife">
+      <image src='{{lpic}}' mode="widthFix"></image>
+      <view class='qyes_text'>
+        <rich-text>{{lname}}</rich-text>
+        <span></span>
+        <text>{{ldescription}}</text>
+      </view>
+    </view>
+    <view class='qysh_01' catchtap="showselection">
+      <image src='{{mpic}}' mode="widthFix"></image>
+      <view class='qyes_text'>
+        <rich-text>{{mname}}</rich-text>
+        <span></span>
+        <text>{{mdescription}}</text>
+      </view>
+    </view>
+    <view class='qysh_01' catchtap="showstores">
+      <image src='{{spic}}' mode="widthFix"></image>
+      <view class='qyes_text'>
+        <rich-text>{{sname}}</rich-text>
+        <span></span>
+        <text>{{sdescription}}</text>
+      </view>
+    </view>
+    <view class='qysh_02' catchtap="showlife">
+       <text class='htz'>{{hname}}</text>
+       <text class='gengduo'>了解详情</text>
+    </view>
+  </view>
+  <view class='qyzyzdz' catchtap="showcustom">
+    <image src='{{bpic}}' mode="widthFix"></image>
+  </view>
+  <view class='qyzyzdz' catchtap="showcooperation">
+    <image src='{{rpic}}' mode="widthFix"></image>
+  </view>
+  <view class='qyzyzdz' catchtap="showrecruiting">
+    <image src='{{wpic}}' mode="widthFix"></image>
+  </view>
+</view>
+<include src="../footer/footer.wxml"/>

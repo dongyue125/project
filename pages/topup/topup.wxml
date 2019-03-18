@@ -1,0 +1,43 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+
+  <view class='productshow topup'>
+    <view class='center'>
+      <text>请输入充值金额</text>
+      <input type='text' placeholder='￥10 0000.00' />
+    </view>
+  </view>
+  <view class='topup_tj'>
+    <button form-type="submit">确认充值</button>
+  </view>
+
+  <view class='topup_the_rules'>
+    <text>充值返现规则</text>
+    <text>这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则这里是充值返现的规则</text>
+  </view>
+
+</view>
+<view style='height:54px'></view>
+<view class='footer_nav'>
+  <view class='footer_nav_01'bindtap="showindex">
+    <icon class="iconfont icon-shouye"></icon>
+    <text>首页</text>
+  </view>
+  <view class='footer_nav_01'>
+    <icon class="iconfont icon-design"></icon>
+    <text>上门量体</text>
+  </view>
+  <view class='footer_nav_01'>
+    <icon class="iconfont icon-yuyue"></icon>
+    <text>预约到店</text>
+  </view>
+  <view class='footer_nav_01'>
+     <icon class="iconfont icon-gouwuche"></icon>
+    <text>加入购物车</text>
+  </view>
+  <view class='footer_nav_01'>
+    <icon class="iconfont icon-gerenzhongxin"></icon>
+    <text>个人中心</text>
+  </view>  
+</view>

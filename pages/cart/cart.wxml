@@ -1,0 +1,50 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container" wx:if="{{hasList}}">
+
+  <view class='view_xz' wx:for="{{list}}" wx:key="{{item.cid}}">
+    <label>
+      <view class='view_xz_se'>
+		<checkbox wx:if="{{item.selected}}" checked="checked" bindtap="selectList" data-index="{{index}}" />
+        <checkbox wx:else bindtap="selectList" data-index="{{index}}" />
+		<text catchtap="del" data-id="{{item.cid}}">删除</text>
+      </view>
+	  
+	  
+      <view class='productshow buy_01'>
+        <view class='buy_img'>
+          <image src='{{item.picurl}}' mode='widthFix'></image>
+        </view>
+        <view class='buy_con'>
+          <text>{{item.title}}</text>
+          <text>{{item.description}}</text>
+          <text>面料：{{item.fabric}}  尺码：{{item.size}}</text>
+          <view class='buy_price'>
+            <text>￥{{item.amount}}</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </label>
+  </view>
+  
+</view>
+<view style='height:54px'></view>
+<view class='footer_nav'>
+  <view class='footer_nav_01' bindtap="showindex">
+    <icon class="iconfont icon-shouye"></icon>
+    <text>首页</text>
+  </view>
+  <view class='footer_nav_01' catchtap="toBuy">
+    <icon class="iconfont icon-goumai"></icon>
+    <text>立即购买</text>
+  </view>
+  <view class='footer_nav_01' catchtap="showsubscribe">
+    <icon class="iconfont icon-design"></icon>
+    <text>上门量体</text>
+  </view>
+  <view class='footer_nav_01' catchtap="showsubscribe">
+    <icon class="iconfont icon-yuyue"></icon>
+    <text>预约到店</text>
+  </view>    
+</view>

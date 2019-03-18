@@ -1,0 +1,102 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class="swiper-container">
+        <swiper class="swiper_box" 
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}"
+            bindchange="swiperchange">
+            <block wx:for="{{banners}}" wx:key="1">
+                <swiper-item>
+                    <image data-id="{{item.businessId}}" src="{{item}}" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper> 
+   </view>
+   <view class='productshow productshow_01'>
+    <view class='center'>
+      <text>￥{{price}}</text>
+      <text>{{title}}</text>
+      <text>月销量：{{sales}}件</text>
+    </view>
+   </view>
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>服务：</text>
+      <text>正品保证 · 送货上门 · 极速退款 · 免费干洗</text>
+    </view>
+   </view>
+  
+   <view class='productshow productshow_04'>
+    <view class='center'>
+      <text>面料选择</text>
+      <view class='fabric'>
+        <image wx:for="{{fabric}}" wx:key="{{item.fid}}" catchtap="selectfrabic" data-id="{{item.fid}}" src='{{item.fpic}}' mode="widthFix" title="{{item.ftitle}}" class='{{item.fid==fid ? "fabric_se" : ""}}'></image>
+      </view>
+    </view>
+   </view>
+   
+   
+   <view class='productshow productshow_05'>
+    <view class='center'>
+      <text>尺寸:　</text>
+      <view class='size'>
+        <text wx:for="{{cateItems}}" wx:key="1" class='{{item.aname==chicun ? "size_se" : ""}}' catchtap="selectsize" data-current="{{item.aname}}">{{item.aname}}</text>
+      </view>
+    </view>
+   </view>
+   
+   
+   
+   <view class='productshow productshow_06'>
+    <view class='center'>
+    <view class='number'>购买数量</view>
+   <!-- 主容器 -->  
+    <view class="stepper">  
+        <!-- 减号 -->  
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+        <!-- 数值 -->  
+        <input type="number" bindchange="bindManual" value="{{num}}" />  
+        <!-- 加号 -->  
+        <text class="normal" bindtap="bindPlus">+</text>  
+    </view>
+    </view>
+  </view>
+  <view class='productshow productshow_07'>
+    <view class='center'>
+      商品详情
+    </view>
+   </view>
+  <view class='details'>
+    <view class='center'>
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    </view>
+  </view>
+
+</view>
+<view style='height:54px'></view>
+<view class='footer_nav'>
+  <view class='footer_nav_01' catchtap="addcart" data-id="{{gid}}" data-current="now">
+    <icon class="iconfont icon-goumai"></icon>
+    <text>立即购买</text>
+  </view>
+  <view class='footer_nav_01' catchtap="addcart" data-id="{{gid}}" data-current="cart">
+     <icon class="iconfont icon-gouwuche"></icon>
+    <text>加入购物车</text>
+  </view>
+  <view class='footer_nav_01' catchtap="addcart" data-id="{{gid}}" data-current="group">
+     <icon class="iconfont icon-pintuan"></icon>
+    <text>立即拼团</text>
+  </view>
+  <view class='footer_nav_01' catchtap="showsubscribe">
+    <icon class="iconfont icon-yuyue"></icon>
+    <text>预约到店</text>
+  </view> 
+	<button class='footer_nav_01' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+    <icon class="iconfont icon-gerenzhongxin"></icon>
+    <text>个人中心</text>
+  </button>   
+</view>

@@ -1,0 +1,18 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text class='htz'>分销记录</rich-text>
+      <rich-text class='htz yy_nav_se'>我的专属码</rich-text>
+    </view>
+    <text>分销系统</text>
+    <text>秀场上称霸的可能会是艺术感十足的创意设计款，但最后还是保守百搭的阿姨上班包卖得最好秀场上称霸的可能会是艺术感十足的创意设计款，但最后还是保守百搭的阿姨上班包卖得最好</text>
+  </view>
+  <view class='exclusive'>
+    <image src='../../images/exclusive.jpg' mode='widthFix'></image>
+    <image src='../../images/head.jpg'></image>
+    <image src='../../images/weixin.jpg'></image>
+  </view>
+</view>
+<include src="../foot/foot.wxml"/>

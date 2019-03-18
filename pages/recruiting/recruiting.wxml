@@ -1,0 +1,24 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
+      <rich-text class='htz' catchtap="showcooperation">资源合作</rich-text>
+    </view>
+    <text>{{classname}}</text>
+    <view>
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+  </view>
+  <view class='recruiting'>
+    <view class='center'>
+      <text class='htz recruiting_01'>职位描述</text>
+      <text>{{ms}}</text>
+<text class='htz recruiting_01'>职位要求</text>
+      <text>{{yaoqiu}}</text>
+    </view>
+  </view>
+</view>
+<include src="../footer/footer.wxml"/>

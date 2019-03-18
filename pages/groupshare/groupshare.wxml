@@ -1,0 +1,39 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+
+  <view class='spellgroup'>
+    <view class='center'>
+    <image src='../../images/bg_03.png' mode='widthFix'></image>
+    </view>
+  </view>
+
+  <view class='productshow spellgroup_01'>
+    <view class='center'>
+      <text>拼团时间</text>
+      <text>01月21日-01月29日 07:00-22:00</text>
+    </view>
+  </view>
+
+  <view class='productshow buy_01'>
+    <view class='buy_img'>
+      <image src='../../images/banner1.jpg' mode='widthFix'></image>
+    </view>
+    <view class='buy_con'>
+      <text>黑色花纱休闲时尚针织单西</text>
+      <text>45.8%羊毛、21.1%粘胶纤维、33.1%聚酯纤维</text>
+      <text>面料：X11011  颜色：黑色  尺码：2XL</text>
+      <view class='buy_price'>
+        <text>￥5000.00</text>
+        <text>/件</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='productshow buy_03'>
+    <button>立即分享</button>
+    <text class='jiage'>（将自动生成二维码分享给微信好友）</text>
+  </view>
+
+</view>
+<include src="../foot/foot.wxml"/>

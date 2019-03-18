@@ -1,0 +1,169 @@
+/**app.wxss**/
+@font-face {
+  font-family: 'iconfont';  /* project id 1017722 */
+  src: url('//at.alicdn.com/t/font_1017722_b3owe3w2g5m.eot');
+  src: url('//at.alicdn.com/t/font_1017722_b3owe3w2g5m.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1017722_b3owe3w2g5m.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1017722_b3owe3w2g5m.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1017722_b3owe3w2g5m.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1017722_b3owe3w2g5m.svg#iconfont') format('svg');
+}
+.center{max-width: 100%;padding: 0 15px;box-sizing:border-box}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-pintuan:before {
+  content: "\e60d";
+}
+
+.icon-arrow-right-copy-copy:before {
+  content: "\e603";
+}
+
+.icon-dizhi:before {
+  content: "\e62e";
+}
+
+.icon-z043:before {
+  content: "\e62f";
+}
+
+.icon-shouye:before {
+  content: "\e619";
+}
+
+.icon-xuanze:before {
+  content: "\e627";
+}
+
+.icon-gouwuche:before {
+  content: "\e653";
+}
+
+.icon-fenlei:before {
+  content: "\e654";
+}
+
+.icon-bofang:before {
+  content: "\e604";
+}
+
+.icon-gerenzhongxin:before {
+  content: "\e651";
+}
+
+.icon-goumai:before {
+  content: "\e73b";
+}
+
+.icon-design:before {
+  content: "\e64c";
+}
+
+.icon-yuyue:before {
+  content: "\e705";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 50px
+} 
+.header{position: fixed;width: 100%;height: 50px;z-index:10;background: #fff;border-bottom: 1px #ddd solid;}
+.sp_header {
+	height: 30px;
+	overflow: hidden;
+	background: #fff;
+	position: absolute;
+	z-index: 10;
+  top: 10px;left: 10px;
+  width: 50px
+}
+.sp_nav {
+	width: 50px;
+	position: relative;
+	cursor: pointer;
+	height: 30px;
+}
+.sp_nav span {
+	display: block;
+	background: #000;
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	left: 10px;
+	transition: all ease 0.35s
+}
+.sp_nav span:nth-of-type(1) {
+	top: 0px
+}
+.sp_nav span:nth-of-type(2) {
+	top: 10px
+}
+.sp_nav span:nth-of-type(3) {
+	top: 20px
+}
+.sp_header .false span:nth-of-type(1) {
+	top: 10px;
+	transform: rotate(45deg)
+}
+.sp_header .false span:nth-of-type(2) {
+	width: 0
+}
+.sp_header .false span:nth-of-type(3) {
+	top: 10px;
+	transform: rotate(-45deg)
+}
+.sjj_nav {
+	position: fixed;
+	z-index: 9;
+	background: #eee;
+	width: 100%;
+	height: calc(100% - 104px);
+	font-size: 14px;
+	line-height: 40px;
+	top:-100%;
+	left: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	transition: top ease 0.35s;
+}
+.nav .false {
+	top: 50px
+}
+.sjj_nav text {
+	border-top: 1px #ddd solid;
+	padding-left: 20px;
+	line-height: 40px;
+	font-size: 14px;
+  display: block
+}
+.logo{width: 32px;display: block;position: absolute;top:10px;left: 50%;margin-left: -16px}
+.logo image{width:100%;}
+.htz{font-family: '黑体';}
+.footer{background: #2a2a2a;width: 100%;padding: 20px;box-sizing:border-box;text-align: center;font-size: 13px;color: #fff;}
+.footer text{display: block}
+.footer text:nth-of-type(1){font-size: 26px;}
+.footer text:nth-of-type(2){font-size: 30px;color: #7c7c7c;font-weight: bold;line-height: 1;}
+.footer text:nth-of-type(3){font-size: 16px;line-height: 30px;margin-top: 15px}
+.erweima{width: 80%;overflow: hidden;margin: auto}
+.erweima_01{width: 45%;float: left;margin: 2.5%;}
+.erweima_01 image{width: 100%}
+.footer .erweima_01 text{font-size: 13px;}
+.copy{border-top: 1px #454545 solid;padding-top: 15px;margin-top: 15px;font-size: 12px}
+.footer_nav{position: fixed;bottom:0;width: 100%;height: 54px;border-top: 1px #ddd solid;background: #fff;display: flex;z-index: 9}
+.footer_nav .footer_nav_01{flex: 1;display: block;text-align: center;border-right:1px #ddd solid;}
+.footer_nav .footer_nav_01 icon{display: block;font-size: 20px;color: #000}
+.footer_nav .footer_nav_01 text{display: block;font-size: 12px;color: #666}
+.yy{background: #f4f4f4;padding: 20px 15px;width: 100%;box-sizing:border-box;text-align: center}
+.yy text:nth-of-type(1){display: block;font-size: 20px;}
+.yy text:nth-of-type(2){display: block;font-size: 14px;color: #666;line-height: 24px;margin-top: 10px}
+.yy_nav{display: flex;justify-content:center;margin-bottom: 15px}
+.yy_nav rich-text{display:block;font-size: 16px;padding: 8px 10px;}
+.yy_nav .yy_nav_se{background: #000;color: #fff;}

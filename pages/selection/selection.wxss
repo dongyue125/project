@@ -1,0 +1,9 @@
+/**product.wxss**/
+.daren{display: flex;padding: 0 15px;margin-left: -15px;justify-content:space-around;flex-wrap:wrap;margin-bottom: 15px}
+.daren .daren_01{width: calc(50% - 15px);margin-left:15px;margin-top: 15px;background: #ececec;}
+.daren .daren_01 image{width: 100%;display: block}
+.daren .daren_01 .daren_02{width: 100%;padding: 15px;box-sizing:border-box;display: block;}
+.daren .daren_01 .daren_02 rich-text{font-size: 15px;color: #000;height: 50px;line-height: 25px;display: block}
+.daren .daren_01 .daren_02 text{font-size: 12px;color: #444;line-height: 18px;display: block;}
+.daren .daren_01 .daren_02 span{width: 50px;height: 1px;background: #999;display: block;margin:10px 0}
+.daren .daren_01 .daren_02 button{width: 120px;height: 35px;line-height: 35px;border-radius: 20px;background: #000;text-align: center;display: block;margin: auto;margin-top: 15px;color: #fff;font-size: 14px}

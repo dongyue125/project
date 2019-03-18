@@ -1,0 +1,11 @@
+/**product.wxss**/
+.custom{width: 100%;}
+.custom image{width: 100%}
+.yuyue{margin-top: 15px;width: 100%;margin-bottom: 20px}
+.yuyue text:nth-of-type(1){display: block;text-align: center;font-size: 26px;}
+.yuyue text:nth-of-type(2){display: block;text-align: center;font-size: 16px;color: #666}
+.yuyue form{display: block;width: 100%;}
+.yuyue form input{width: 100%;line-height: 40px;padding-left: 20px;font-size: 14px;display: block;background: #ececec;margin-top: 10px;height: 40px;box-sizing:border-box}
+.yuyue form button{width: 100%;line-height: 40px;font-size: 14px;display: block;background: #000;margin-top: 10px;height: 40px;box-sizing:border-box;color: #fff}
+.section .picker{width: 100%;line-height: 40px;padding-left: 20px;font-size: 14px;display: block;background: #ececec;margin-top: 10px;height: 40px;box-sizing:border-box;overflow: hidden;color: #666}
+.section .picker text{float: right;font-size: 14px;color: #000;margin-right: 15px}

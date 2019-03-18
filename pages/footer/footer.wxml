@@ -1,0 +1,41 @@
+<!--pages/footer/footer.wxml-->
+<view class='footer'>
+  <text>联系我们</text>
+  <text>contact  us</text>
+  <text>全国客服统一电话：024-23494088
+商务合作：13700045550
+企业邮箱：fenglei@fenglei.cn
+总部：沈阳市和平区南京北街30号</text>
+<view class='erweima'>
+  <view class='erweima_01'>
+    <image src='../../images/weixin.jpg'  mode="widthFix"></image>
+    <text>穿搭服务公共平台</text>
+  </view>
+  <view class='erweima_01'>
+    <image src='../../images/small.jpg'  mode="widthFix"></image>
+    <text>微信小程序</text>
+  </view>
+</view>
+<view class='copy'>
+  Copyright 辽宁丰雷服饰定制有限公司 All right reserved. 备案号：辽ICP备109476334
+</view>
+</view>
+<view class='footer_nav'>
+  <view class='footer_nav_01' bindtap="showindex">
+    <icon class="iconfont icon-shouye"></icon>
+    <text>首页</text>
+  </view>
+  <view class='footer_nav_01' catchtap="showproduct" data-id="11">
+     <icon class="iconfont icon-fenlei"></icon>
+    <text>新品</text>
+  </view>
+  <view class='footer_nav_01' catchtap="showcart">
+    <icon class="iconfont icon-gouwuche"></icon>
+    <text>购物车</text>
+  </view>
+  <button class='footer_nav_01' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+    <icon class="iconfont icon-gerenzhongxin"></icon>
+    <text>个人中心</text>
+  </button>    
+</view>
+<view style='height:54px'></view>

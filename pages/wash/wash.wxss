@@ -1,0 +1,8 @@
+/**product.wxss**/
+.wash{margin-bottom:20px;width: 100%;}
+.wash_01{width: 100%;display: block;position: relative;background: #eeeeee;margin-top:20px;height: 250px;font-size: 14px;text-align: center;}
+.wash_02 image{width: 100%;display: block}
+.wash_01 text:nth-of-type(1){position: absolute;top:20px;left:20px;width:30px;line-height: 30px;height: 30px;background: rgba(0,0,0,1);text-align: center;color: #fff;font-size: 16px;border-radius: 15px}
+.wash_01 text:nth-of-type(2){position: absolute;top: 50%;left:50%;width: 80%;transform: translate(-50% , -50%);font-size: 18px;line-height: 1.5}
+.stores_02{width: 100%;margin-top: 10px}
+.stores_02 video{width:750rpx;display: block}

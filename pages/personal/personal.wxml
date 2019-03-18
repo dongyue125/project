@@ -1,0 +1,57 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+
+  <view class='productshow head_portrait'>
+    <view class='center'>
+      <image src='{{avatarurl}}'></image>
+      <view class='head_portrait_01'>
+        <text>{{nickname}}</text>
+        <text>海浪无声将夜幕深深淹没漫过天空尽头的角落大鱼在梦境的缝隙里游过</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='productshow the_order'>
+    <text catchtap="showorder" data-current="all">全部订单（{{allo}}）</text>
+    <text catchtap="showorder" data-current="confirm">代付款（{{confirmo}}）</text>
+    <text catchtap="showorder" data-current="payment">待发货（{{payment}}）</text>
+    <text catchtap="showorder" data-current="postgoods">待收货（{{postgoods}}）</text>
+  </view>
+
+ 
+
+  <view class='productshow productshow_03' catchtap="grouporder" data-current="group">
+    <view class='center'>
+      <text>我的拼团订单</text>
+      <icon class="iconfont icon-arrow-right-copy-copy"></icon>
+    </view>
+  </view>
+
+  <view class='productshow productshow_03' catchtap="showaddress">
+    <view class='center'>
+      <text>收货地址管理</text>
+      <icon class="iconfont icon-arrow-right-copy-copy"></icon>
+    </view>
+  </view>
+
+</view>
+<view style='height:54px'></view>
+<view class='footer_nav'>
+  <view class='footer_nav_01' bindtap="showindex">
+    <icon class="iconfont icon-shouye"></icon>
+    <text>首页</text>
+  </view>
+  <view class='footer_nav_01' bindtap="showproduct" data-id="43">
+     <icon class="iconfont icon-fenlei"></icon>
+    <text>新品</text>
+  </view>
+  <view class='footer_nav_01' bindtap="showcart">
+    <icon class="iconfont icon-gouwuche"></icon>
+    <text>购物车</text>
+  </view>
+  <button class='footer_nav_01' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+    <icon class="iconfont icon-gerenzhongxin"></icon>
+    <text>个人中心</text>
+  </button>    
+</view>

@@ -1,0 +1,24 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
+      <rich-text class='htz'>干洗服务</rich-text>
+    </view>
+    <text>{{classname}}</text>
+    <text>{{description}}</text>
+  </view>
+    <view class='stores' wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class='stores_01'>
+        <image src='{{item.picurl}}' mode='widthFix'></image>
+        <text class='htz'>{{item.title}}</text>
+      </view>
+      <view class='stores_02'>
+        <video src='{{item.vurl}}' poster='{{item.picurl}}'></video>
+      </view>
+    </view>
+
+    <view style='height:20px'></view>
+</view>
+<include src="../footer/footer.wxml"/>

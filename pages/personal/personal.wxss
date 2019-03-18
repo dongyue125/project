@@ -1,0 +1,19 @@
+/**product.wxss**/
+.productshow{width: 100%;border-bottom: 5px #f4f4f4 solid;padding: 15px 0;line-height:1.5}
+.productshow text{display: block}
+.head_portrait .center{display: flex;padding:0 15px}
+.head_portrait image{width: 80px;height: 80px;border-radius: 50px;overflow: hidden;border: 4px #ddd solid;}
+.head_portrait_01{flex: 1;padding-left: 15px}
+.head_portrait_01 text:nth-of-type(1){font-size: 18px;display: block;padding-top: 10px}
+.head_portrait_01 text:nth-of-type(2){font-size: 13px;color: #999999;display: block}
+.the_order{display: flex;justify-content:space-around;width: 100%;margin-left: -2px;padding:0}
+.the_order text{flex: 1;font-size: 12px;line-height: 40px;height: 40px;background: #dcdcdc;margin-left: 2px;text-align: center}
+.top_up{display: flex;width: 100%;line-height: 40px;height: 40px;padding: 0;}
+.top_up text:nth-of-type(1){font-size: 14px;width: 85px;text-align: center}
+.top_up text:nth-of-type(2){flex: 1;text-align: center;color: #c9141d;font-size: 20px;}
+.top_up button{font-size: 14px;width: 85px;text-align: center;background: #000;color: #fff;border:0;border-radius: 0;display: block;padding: 0}
+.distribution text:nth-of-type(2){font-size: 14px}
+.productshow_03{padding:0px;}
+.productshow_03 .center{display: flex}
+.productshow_03 text{font-size: 14px;color: #666;padding: 0px;box-sizing:border-box;flex: 1;line-height: 40px}
+.productshow_03 icon{width: 20px;font-size:18px;margin-top: 5px}

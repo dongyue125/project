@@ -1,0 +1,11 @@
+/**product.wxss**/
+.productshow{width: 100%;border-bottom: 5px #f4f4f4 solid;padding: 15px 0;line-height:1.5}
+.productshow text{display: block}
+.topup{width: 100%;overflow: hidden;line-height: 40px;font-size: 14px;padding: 0}
+.topup text{font-size: 16px;float: left;}
+.topup input{float: right;line-height: 40px;height: 40px;text-align: right}
+.topup_tj{width: 100%}
+.topup_tj button{width: 100%;text-align: center;border:0;border-radius: 0;background: #000;line-height: 40px;height: 40px;color: #fff;font-size: 13px}
+.topup_the_rules{background: #fff;padding: 15px;box-sizing:border-box;font-size: 13px;color: #666;line-height: 24px;border-top: 5px #ddd solid;border-bottom: 5px #f4f4f4 solid;}
+.topup_the_rules text{display: block}
+.topup_the_rules text:nth-of-type(1){font-size: 16px;border-bottom: 1px #f4f4f4 solid;padding-bottom: 5px;margin-bottom: 1px;color: #000}

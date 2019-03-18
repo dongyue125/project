@@ -1,0 +1,33 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='productshow pay'>
+    <image src='../../images/pay_03.jpg' mode='widthFix'></image>
+    <text>恭喜您，充值成功</text>
+  </view>
+
+  <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>充值金额</text>
+      <text>￥2 0000.00</text>
+    </view>
+   </view>
+
+  <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>返现金额</text>
+      <text>￥2 0000.00</text>
+    </view>
+   </view>
+
+  <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>会员卡余额</text>
+      <text>￥4 0000.00</text>
+    </view>
+   </view>
+
+</view>
+<view class='querzf'>
+  个人中心
+</view>

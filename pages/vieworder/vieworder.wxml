@@ -1,0 +1,27 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+
+  <view class='view_xz' wx:if="{{list}}" wx:for="{{list}}" wx:key="{{item.oid}}">
+    <label>
+      
+      <view class='productshow buy_01'>
+        <view class='buy_img'>
+          <image src='{{item.picurl}}' mode='widthFix'></image>
+        </view>
+        <view class='buy_con'>
+          <text>{{item.title}}</text>
+          <text>{{item.description}}</text>
+          <text>面料：{{item.fabric}}  尺码：{{item.size}}</text>
+          <view class='buy_price'>
+            <text>￥{{item.amount}}</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </label>
+  </view>
+  
+</view>
+<view style='height:54px'></view>
+<include src="../footer/footer.wxml"/>

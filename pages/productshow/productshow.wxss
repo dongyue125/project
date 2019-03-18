@@ -1,0 +1,82 @@
+/**productshow.wxss**/
+.swiper-container{
+  width: 750rpx;
+  position: relative;
+}
+.swiper_box {
+  width: 100%;
+  height:750rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+.productshow{width: 100%;border-bottom: 5px #f4f4f4 solid;padding: 15px 0;line-height:1}
+.productshow text{display: block}
+.productshow_01 text:nth-of-type(1){font-size: 20px;color: #cf0f11;}
+.productshow_01 text:nth-of-type(2){font-size: 12px;color: #313131;margin-top: 10px;}
+.productshow_01 text:nth-of-type(3){font-size: 12px;color: #acacac;margin-top: 10px;}
+.productshow_02 text{display:initial;font-size: 12px}
+.productshow_02 text:nth-of-type(1){color: #acacac;}
+.productshow_02 text:nth-of-type(2){color: #313131;}
+.productshow_03{font-size: 14px}
+.productshow_03 text{font-size: 12px;color: #313131;margin-bottom: 5px}
+.productshow_03 icon{font-size: 18px}
+.productshow_03 icon:last-child{float: right}
+.productshow_04 text{font-size: 14px;color: #313131;}
+.fabric{display: flex;margin-top: 10px}
+.fabric image{flex: 1;margin-right: 5px;border:2px #fff solid;}
+.fabric .fabric_se{border:2px #cf0f11 solid;}
+.productshow_05{overflow: hidden}
+.productshow_05 text{display: initial;font-size: 13px;color: #acacac;}
+.productshow_05 .size{display: inline-block}
+.productshow_05 .size text{color: #000;padding: 0 10px;border-radius: 3px}
+.productshow_05 .size .size_se{background: #cf0f11;color: #fff}
+.productshow_06{padding:2px 0}
+.number{float: left;font-size: 12px;color: #acacac;line-height: 30px}
+/*主容器*/  
+.stepper {  
+    width: 90px;
+    line-height: 30px;
+    height: 30px;
+    background: #f4f4f4;
+    float: right
+}  
+  
+/*加号和减号*/  
+.stepper text {  
+    width:30px;
+    text-align: center;  
+    float: left;
+    font-size: 16px;
+    display: block;
+    height: 30px
+}  
+  
+/*数值*/  
+.stepper input {  
+    width: 30px;  
+    height: 30px;  
+    float: left;  
+    text-align: center;  
+    font-size: 14px;  
+    /*给中间的input设置左右边框即可*/  
+    border-left: 2px solid #fff;  
+    border-right: 2px solid #fff; 
+    float: left;
+    box-sizing: border-box
+}  
+  
+/*普通样式*/  
+.stepper .normal{  
+    color: black;  
+}  
+  
+/*禁用样式*/  
+.stepper .disabled{  
+    color: #ccc;  
+} 
+.productshow_07{font-size: 12px;color: #acacac;border-left: 5px #cf0f11 solid;line-height: 30px;padding: 0}

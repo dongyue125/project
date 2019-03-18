@@ -1,0 +1,110 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text class='htz yy_nav_se'>分销记录</rich-text>
+      <rich-text class='htz'>我的专属码</rich-text>
+    </view>
+    <text>分销系统</text>
+    <text>秀场上称霸的可能会是艺术感十足的创意设计款，但最后还是保守百搭的阿姨上班包卖得最好秀场上称霸的可能会是艺术感十足的创意设计款，但最后还是保守百搭的阿姨上班包卖得最好</text>
+  </view>
+
+  <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>用户：15104021772
+        充值：￥10 0000.00
+        我获得的佣金额为：￥10 0000.00
+      </text>
+      <text>2019-01-18
+        16:40:29
+      </text>
+    </view>
+   </view>
+
+</view>
+<include src="../foot/foot.wxml"/>

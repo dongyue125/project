@@ -1,0 +1,42 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='productshow productshow_03' catchtap="add_address">
+    <view class='center'>
+      <icon class="iconfont icon-dizhi"></icon>
+	  <text>收货人：{{consignee}}　　　{{tel}}
+      收货地址：{{prov}}  {{city}}  {{country}}  {{address}}
+      </text>
+      <icon class="iconfont icon-arrow-right-copy-copy"></icon>
+    </view>
+  </view>
+
+  
+  
+  <view class='productshow buy_01' wx:for="{{list}}" wx:key="{{item.cid}}">
+    <view class='buy_img'>
+      <image src='{{item.picurl}}' mode='widthFix'></image>
+    </view>
+    <view class='buy_con'>
+      <text>{{item.title}}</text>
+      <text>{{item.description}}</text>
+      <text>面料：{{item.fabric}}  尺码：{{item.size}}</text>
+      <view class='buy_price'>
+        <text>￥{{item.amount}}</text>
+        <text></text>
+      </view>
+    </view>
+  </view>
+
+  
+  
+  
+  
+  <view class='productshow buy_03'>
+    <button catchtap="buy" data-current="{{cidstr}}">提交订单</button>
+    <text class='jiage'>￥{{total}}</text>
+    <text class='suliang'>共{{num}}件，总金额：</text>
+  </view>
+
+</view>
+<include src="../foot/foot.wxml"/>

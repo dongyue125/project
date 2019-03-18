@@ -1,0 +1,25 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text wx:for="{{alist}}" wx:key="{{item.catid}}" catchtap="showproduct" data-id="{{item.catid}}" class='{{item.catid==cid ? "htz yy_nav_se" : ""}}'>{{item.cname}}</rich-text>
+    </view>
+    <text>{{classname}}</text>
+    <view>
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+  </view>
+  <view class='product'>
+
+    <view class='product_01' wx:for="{{list}}" wx:key="{{item.id}}" catchtap='showproductshow' data-id="{{item.id}}">
+      <image src='{{item.picurl}}' mode="widthFix"></image>
+      <view class='product_02'>
+        <rich-text>{{item.title}}</rich-text>
+        <text>￥{{item.price}}</text><text>688人付款</text>
+      </view>
+    </view>
+  </view>
+</view>
+<include src="../footer/footer.wxml"/>

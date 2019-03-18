@@ -1,0 +1,34 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>订单详情</text>
+      <text>{{title}}</text>
+    </view>
+   </view>
+
+  <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>会员余额</text>
+      <text>￥{{money}}</text>
+    </view>
+   </view>
+
+   <view class='productshow productshow_02'>
+    <view class='center'>
+      <text>付款方式</text>
+      <text>微信支付</text>
+    </view>
+   </view>
+
+  <view class='productshow productshow_02 submit_01'>
+    <view class='center'>
+      <text>需付款</text>
+      <text>{{amount}}元</text>
+    </view>
+   </view>
+</view>
+<view class='querzf' catchtap="pay" data-id="{{oid}}">
+  确认支付
+</view>

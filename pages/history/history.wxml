@@ -1,0 +1,25 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class='yy'>
+    <view class='yy_nav'>
+      <rich-text class='htz yy_nav_se'>发展历程</rich-text>
+      <rich-text class='htz' catchtap="showlife">企业生活</rich-text>
+      <rich-text class='htz' catchtap="showselection">丰雷先生评选</rich-text>
+    </view>
+    <text>发展历程</text>
+    <view>
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+  </view>
+  <view class='history'>
+    <image src='../../images/history_02.jpg' mode='widthFix'></image>
+    <text class='htz'>22年历史沿革与创新</text>
+	<view wx:for="{{list}}" wx:key="1">
+		<image src='{{item.picurl}}' mode='widthFix'></image>
+		<text class='htz'>{{item.title}}</text>
+	</view>
+  </view>
+</view>
+<include src="../footer/footer.wxml"/>

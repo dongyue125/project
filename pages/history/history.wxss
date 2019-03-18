@@ -1,0 +1,4 @@
+/**product.wxss**/
+.history{width: 100%;margin-bottom:20px;}
+.history image{width: 100%;margin-top:20px;}
+.history text{display: block;width: 100%;text-align: center;font-size: 18px;}
