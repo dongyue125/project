@@ -8,34 +8,6 @@
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
   </view>
-
-  <view class='consulting'>
-    <view class='center'>
-    <view class='consulting_bg'><image src='../../images/ddk_03.jpg' mode='widthFix'></image></view>
-
-    <view class='consulting_01' wx:for="{{list}}" wx:key="1">
-      <view class='consulting_02'>
-        <text>Q</text>
-        <text>{{item.title}}</text>
-      </view>
-      <view class='consulting_02'>
-        <text>A</text>
-        <text>{{item.content}}</text>
-      </view>
-    </view>
-
-    <form bindsubmit="formSubmit">
-      <input name="nickname" value="" placeholder="请输入您的姓名（必填）" />
-      <input name="contact" value="" placeholder="请输入您的电话（必填）" />
-      <input name="sex" value="" placeholder="请输入您的性别" />
-      <textarea name="content"  value="" placeholder="请输入您的问题（必填）"></textarea>
-      <button form-type="submit">立即提交</button>
-    </form>
-
-  </view>
-  </view>
-
-
   <view class='consulting_03'>
     <view class='center'>
       <view class='consulting_bg'><image src='../../images/ddk_06.jpg' mode='widthFix'></image></view>
@@ -45,17 +17,14 @@
     <view class='center' wx:for="{{plist}}" wx:key="{{item.id}}">
       <view class='wash_01'>
         <text>{{item.id}}</text>
-        <text>{{item.content}}</text>
+        <view>
+			{{item.content}}
+		</view>
       </view>
       <view class='wash_02'>
         <image src='{{item.picurl}}' mode='widthFix'></image>
       </view>
     </view>
   </view>
-
-  <view class='xzcds'>
-    <text>选择穿搭师</text>
-  </view>
-
 </view>
 <include src="../footer/footer.wxml"/>

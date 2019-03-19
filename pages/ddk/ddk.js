@@ -28,7 +28,6 @@ Page({
         that.setData({
           classname:res.data.classname,
 		  content:temp,
-		  list:res.data.message,
 		  plist:res.data.play,
         }),
 		wx.setNavigationBarTitle({

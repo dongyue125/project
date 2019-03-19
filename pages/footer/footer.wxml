@@ -27,15 +27,13 @@
   </view>
   <view class='footer_nav_01' catchtap="showproduct" data-id="11">
      <icon class="iconfont icon-fenlei"></icon>
-    <text>新品</text>
+    <text>了解更多</text>
   </view>
-  <view class='footer_nav_01' catchtap="showcart">
-    <icon class="iconfont icon-gouwuche"></icon>
-    <text>购物车</text>
+  <view class='footer_nav_01'>
+	<button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+		<icon class="iconfont icon-gerenzhongxin"></icon>
+		<text>个人中心</text>
+	</button> 
   </view>
-  <button class='footer_nav_01' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
-    <icon class="iconfont icon-gerenzhongxin"></icon>
-    <text>个人中心</text>
-  </button>    
 </view>
 <view style='height:54px'></view>
