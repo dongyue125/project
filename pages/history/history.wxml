@@ -1,25 +1,36 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <view class='yy_nav'>
-      <rich-text class='htz yy_nav_se'>发展历程</rich-text>
-      <rich-text class='htz' catchtap="showlife">企业生活</rich-text>
-      <rich-text class='htz' catchtap="showselection">丰雷先生评选</rich-text>
-    </view>
-    <text>发展历程</text>
-    <view>
+
+ <view class="y-nav y-nav2">
+   <view class="nav1" catchtap="showlife">企业生活</view>
+   <view class="nav1" catchtap="showselection">丰雷先生评选</view>
+   <view class="nav1 active" catchtap="showhistory">23年的我们</view>
+ </view>
+
+  <view class='yy yy1'>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
   </view>
+
   <view class='history'>
-    <image src='../../images/history_02.jpg' mode='widthFix'></image>
-    <text class='htz'>22年历史沿革与创新</text>
+    <image src='{{img}}' mode='widthFix'></image>
+    <text class='htz'>{{name}}</text>
 	<view wx:for="{{list}}" wx:key="1">
 		<image src='{{item.picurl}}' mode='widthFix'></image>
 		<text class='htz'>{{item.title}}</text>
 	</view>
   </view>
 </view>
+
+<view class="his">
+  <view class="li" wx:for="{{tlist}}" wx:key="2">
+    <image src='{{item.picurl}}' mode='widthFix'></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+
 <include src="../footer/footer.wxml"/>

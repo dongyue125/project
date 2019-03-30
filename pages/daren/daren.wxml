@@ -2,14 +2,13 @@
 <include src="../header/header.wxml"/>
 <view class="container">
   <view class='yy'>
-    <text>{{classname}}</text>
-    <view>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
   </view>
   <view class='daren'>
-
     <view class='daren_01' wx:for="{{list}}" wx:key="{{item.id}}">
       <video src='{{item.vurl}}' poster='{{item.picurl}}' ></video>
       <view class='daren_02'>

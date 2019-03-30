@@ -1,10 +1,11 @@
 //app.js
 App({
-
-
-
-  onLaunch: function () {
-    
-    
-  }
+	onLaunch: function () {
+		var logs = wx.getStorageSync('logs') || []
+		logs.unshift(Date.now())
+		wx.setStorageSync('logs', logs)
+	},
+	globalData: {
+		pid: null
+	}
 })

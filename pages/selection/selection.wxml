@@ -1,29 +1,29 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <view class='yy_nav'>
-      <rich-text class='htz' catchtap="showhistory">发展历程</rich-text>
-      <rich-text class='htz' catchtap="showlife">企业生活</rich-text>
-      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
-    </view>
-    <text>{{classname}}</text>
-    <view>
+  <view class="y-nav y-nav2">
+   <view class="nav1" catchtap="showlife">企业生活</view>
+   <view class="nav1 active" catchtap="showselection">丰雷先生评选</view>
+   <view class="nav1" catchtap="showhistory">23年的我们</view>
+ </view>
+
+  <view class='yy yy1'>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
   </view>
-  <view class='daren'>
 
+  <view class='daren'>
     <view class='daren_01' wx:for="{{list}}" wx:key="{{item.id}}">
       <image src='{{item.picurl}}' mode='widthFix'></image>
       <view class='daren_02'>
         <rich-text>{{item.title}}</rich-text>
-        <span></span>
-        <text>{{item.description}}</text>
         <button catchtap='selectionshowshow' data-id="{{item.id}}">了解更多</button>
       </view>
     </view>
   </view>
 </view>
+
 <include src="../footer/footer.wxml"/>

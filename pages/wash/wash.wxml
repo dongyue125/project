@@ -1,24 +1,25 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <view class='yy_nav'>
-      <rich-text class='htz'>体验店</rich-text>
-      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
-    </view>
-    <text>{{classname}}</text>
-    <text>{{description}}</text>
+  <view class="y-nav y-nav2">
+   <view class="nav1" catchtap="showstores">体验店</view>
+   <view class="nav1 active" catchtap="showwash">干洗服务</view>
   </view>
+
+  <view class='yy yy1'>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+	</view> 
+
   <view class='wash'>
-    <view class='center' wx:for="{{list}}" wx:key="{{item.id}}">
-      <view class='wash_01'>
-        <text>{{item.id}}</text>
-        <text>{{item.content}}</text>
-      </view>
-      <view class='wash_02'>
-        <image src='{{item.picurl}}' mode='widthFix'></image>
-      </view>
+    <view class="dd" wx:for="{{list}}" wx:key="{{item.id}}">
+      <text>{{item.content}}</text>
+      <image src='{{item.picurl}}' mode="widthFix"></image>
     </view>
   </view>
 </view>
+
 <include src="../footer/footer.wxml"/>

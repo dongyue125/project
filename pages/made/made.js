@@ -3,6 +3,17 @@ const app = getApp()
 const requestUrl = require('../../config').requestUrl
 Page({
   data: {
+    multiIndex: [0, 0, 0],
+    date: '2019-01-01',
+    time: '12:01',
+
+    multiIndex: [0, 0, 0],
+    region: ['辽宁省', '沈阳市', '和平区'],
+    customItem: '全部',
+	
+	nickname:'',
+	tel:'',
+
     avatarUrl: './user-unlogin.png',
     userInfo: {},
     logged: false,
@@ -11,14 +22,15 @@ Page({
     hide: true,
   },
   
+  
   onLoad: function (options) {
-    var that = this;
 	var WxParse = require('../../wxParse/wxParse.js');
+    var that = this
     //网络请求 GET方法
     wx.request({
       url: requestUrl, //仅为示例，并非真实的接口地址
       data: {
-        act: 'resource',
+        act: 'made_two',
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -26,18 +38,78 @@ Page({
       success(res) {
         console.log(res);
 		var temp = WxParse.wxParse('content', 'html', res.data.description, that, 5);
-		var temp2 = WxParse.wxParse('message', 'html', res.data.message, that, 5);
         that.setData({
-			classname:res.data.classname,
 			content:temp,
-			message:temp2
-        }),
-		wx.setNavigationBarTitle({
-			title: that.data.classname,
-		})
+			img:res.data.img,
+			clist:res.data.clist,
+        })
       }
     })
   },
+  
+  formSubmit(e) {
+	var that = this
+	var pattern = /^1[34578]\d{9}$/
+	if(e.detail.value.nickname==''){
+	  wx.showModal({
+		title: '提示',
+		showCancel: false,
+		content: '请输入姓名！',
+	  });
+	  return false;
+	}
+	else if(e.detail.value.tel==''){
+		wx.showModal({
+		title: '提示',
+		showCancel: false,
+		content: '请输入电话！',
+	  });
+		return false;
+	}
+	else if(!pattern.test(e.detail.value.tel)){
+		wx.showModal({
+		title: '提示',
+		showCancel: false,
+		content: '请输入正确的电话号！',
+	  });
+		return false;
+	}
+	else if(that.data.date==''){
+		wx.showModal({
+		title: '提示',
+		showCancel: false,
+		content: '请选择时间！',
+	  });
+		return false;
+	}else{
+		wx.request({
+		  url: requestUrl, //仅为示例，并非真实的接口地址
+		  method: "POST",
+		  data: {
+			act: 'do_app',
+			nickname : e.detail.value.nickname,
+			contact : e.detail.value.tel,
+			content : that.data.date,
+		  },
+		  header: {
+			"Content-Type": "application/x-www-form-urlencoded"
+		  },
+		  success(res) {
+			console.log(res);
+			wx.showToast({title: '提交成功！',success: res => {
+				if (getCurrentPages().length != 0) {
+					getCurrentPages()[getCurrentPages().length - 1].onLoad()
+				}
+			}})
+			that.setData({
+				nickname: '',
+				tel:'',
+			})
+		  }
+		})
+	}
+  },
+  
   
   bindGetUserInfo: function(e) {
 	if (e.detail.userInfo) {
@@ -105,6 +177,13 @@ Page({
       url: '/pages/custom/custom',
     });
   },
+  
+  showmade: function () {
+    wx.navigateTo({
+      url: '/pages/made/made',
+    });
+  },
+  
   showcooperation: function () {
     wx.navigateTo({
       url: '/pages/cooperation/cooperation',
@@ -219,14 +298,18 @@ Page({
       url: '/pages/news/news?cid='+cid,
     });
   },
-  showrecruiting: function () {
-    wx.navigateTo({
-      url: '/pages/recruiting/recruiting',
-    });
+
+  bindDateChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
   },
-  showproductshow: function () {
-    wx.navigateTo({
-      url: '/pages/productshow/productshow',
-    });
-  }
+ 
+  bindRegionChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
 })

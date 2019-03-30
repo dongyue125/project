@@ -1,5 +1,5 @@
 /**daren.wxss**/
-.daren{display: flex;padding: 0 15px;margin-left: -15px;justify-content:space-around;flex-wrap:wrap;margin-bottom: 15px}
+.daren{display: flex;padding: 0 15px;margin-left: -15px;justify-content:space-around;flex-wrap:wrap;margin-bottom: 30px}
 .daren .daren_01{width: calc(50% - 15px);margin-left:15px;margin-top: 15px;}
 .daren .daren_01 video{width: 100%;display: block}
 .daren .daren_01 .daren_02{width: 100%;background: #ececec;padding: 15px;box-sizing:border-box;display: block;}

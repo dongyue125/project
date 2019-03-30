@@ -1,57 +1,20 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <text>{{classname}}</text>
-    <view>
+  <view class="y-nav">
+   <view class="nav1 active" catchtap="showcustom">辽宁职业装设计研发中心</view>
+   <view class="nav1" catchtap="showmade">睿朗职业装团体定制</view>
+   <view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
+ </view>
+
+ <view class="custom">
+  <view class="li" wx:for="{{list}}" wx:key="{{item.id}}">
+    <image src='{{item.picurl}}' mode="widthFix"></image>
+    <text>{{item.title}}</text>
   </view>
-
-  <view class='yuyue'>
-    <text class='htz'>请填写预约信息</text>
-    <text>截止今日 已有724人预约</text>
-    <view class='center'>
-      <form bindsubmit="formSubmit">
-          <view class="field clearfix">
-            <input id="name" name="nickname" value="{{nickname}}" class="login-input" type="text" placeholder="请输入姓名" />
-            <input id="tel" name="tel" value="{{tel}}" class="login-input" type="text" placeholder="请输入电话" />
-
-            <!-- <view class="section__title">日期选择器</view> -->
-            <view class="section">
-              <picker
-                mode="date"
-                value="{{date}}"
-                start="2019-02-15"
-                end="2019-03-01"
-                bindchange="bindDateChange"
-              >
-                <view class="picker">
-                  请选择时间: <text>{{date}}</text>
-                </view>
-              </picker>
-            </view>
-            <!-- <view class="section__title">地区选择器</view> -->
-            <view class="section">
-              <picker
-                mode="region"
-                bindchange="bindRegionChange"
-                value="{{region}}"
-                custom-item="{{customItem}}"
-              >
-                <view class="picker">
-                  请选择省市：<text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
-                </view>
-              </picker>
-            </view>
-
-            <input id="address" name="address" value="{{address}}" class="login-input" type="text" placeholder="请输入详细地址" />
-
-          </view>
-          <button class="btn_login"  formType="submit">立即预约</button>
-      </form>
-    </view>
-  </view>
+ </view>
 </view>
 <include src="../footer/footer.wxml"/>

@@ -29,8 +29,7 @@ Page({
         that.setData({
 			classname:res.data.classname,
 			content:temp,
-			ms:res.data.ms,
-			yaoqiu:res.data.yaoqiu,
+			clist:res.data.clist,
         }),
 		wx.setNavigationBarTitle({
 			title: that.data.classname,

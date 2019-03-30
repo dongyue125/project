@@ -1,4 +1,41 @@
 /**product.wxss**/
-.history{width: 100%;margin-bottom:20px;}
-.history image{width: 100%;margin-top:20px;}
-.history text{display: block;width: 100%;text-align: center;font-size: 18px;}
+.history{
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.history image{
+  width: 100%;
+  margin-top:15px;
+}
+.history text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.his {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.his .li{
+  width: calc(50% - 10px);
+  float: left;
+  margin: 5px;
+  text-align: center;
+}
+.his .li image{
+  display: block;
+  width: 100%;
+}
+.his .li text{
+  display: block;
+  line-height: 20px;
+  padding: 10px;
+  background: #e9e9e9;
+  color: #333;
+  font-size: 14px;
+}

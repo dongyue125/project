@@ -1,0 +1,79 @@
+/**product.wxss**/
+.made{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.made .til{
+  font-size: 18px;
+  color: #fff;
+  background:#000;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+}
+.made image{
+  width: 100%;
+  display: block;
+}
+.made .dd{
+  margin-top: 15px;
+}
+.made .dd .wz text{
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.made .dd .wz{
+  color: #fff;
+  background:#000;
+  text-align: center;
+  line-height: 24px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.yuyue{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 15px 30px 15px;
+}
+.yuyue .til1{
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.yuyue input{
+  display: block;
+  width: 100%;
+  font-family: "youyuan";
+  font-size: 14px;
+  box-sizing: border-box;
+  line-height: 36px;
+  height: 36px;
+}
+.yuyue button{
+  font-size: 14px;
+  font-family: "youyaun";
+  color: #fff;
+  background: #000;
+  line-height: 36px;
+  height: 36px;
+  border-radius: 3px;
+}
+.yuyue .section{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  color: #666;
+}
+.yuyue .picker{
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  font-family: "youyuan";
+  font-size: 14px;
+  line-height: 36px;
+  height: 36px;
+}

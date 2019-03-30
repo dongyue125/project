@@ -1,24 +1,21 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <view class='yy_nav'>
-      <rich-text class='htz' catchtap="showrecruiting">穿搭师招募</rich-text>
-      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
-    </view>
-    <text>{{classname}}</text>
-    <view>
+  <view class="y-nav y-nav2">
+   <view class="nav1 active" catchtap="showcooperation">资源合作</view>
+   <view class="nav1" catchtap="showrecruiting">穿搭师招募</view>
+  </view>
+
+  <view class='yy yy1'>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
+	</view>
+  <view class="wz">
+	<import src="../../wxParse/wxParse.wxml"/>
+	<template is="wxParse" data="{{wxParseData:message.nodes}}"/>
   </view>
-  <view class='cooperation'>
-    <view class='center'>
-      <view class='cooperation_01' wx:for="{{list}}" wx:key="1">
-        <text class='htz'>{{item.title}}</text>
-        <text>{{item.content}}</text>
-      </view>
-    </view>
-  </view>
-</view>
+</view> 
 <include src="../footer/footer.wxml"/>

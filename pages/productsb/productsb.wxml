@@ -1,0 +1,42 @@
+<!--daren.wxml-->
+<include src="../header/header.wxml"/>
+<view class="container">
+  <view class="y-nav">
+   <view class="nav1 active1" catchtap="showproduct2">商务标配</view>
+   <view class="nav1" catchtap="showproduct" data-id="11">2019春夏新品</view>
+   <view class="text">
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+  </view>
+  
+  <view class="productsb">
+    <view class="sb-group">
+      <view class="title7">西服</view>
+      <view class="dd" wx:for="{{xlist}}" wx:key="{{item.id}}" catchtap='showproductshow' data-id="{{item.id}}">
+        <image src='{{item.picurl}}' mode="widthFix"></image>
+        <view class="wz">
+          <view class="h4">{{item.title}}</view>
+          <view class="h6">{{item.description}}</view>
+        </view>
+      </view>
+	  
+    </view>
+	
+    <view class="sb-group">
+      <view class="title7">衬衫</view>
+	  
+      <view class="dd" wx:for="{{clist}}" wx:key="{{item.id}}" catchtap='showproductshow' data-id="{{item.id}}">
+        <image src='{{item.picurl}}' mode="widthFix"></image>
+        <view class="wz">
+          <view class="h4">{{item.title}}</view>
+          <view class="h6">{{item.description}}</view>
+        </view>
+      </view>
+	 
+	  
+    </view>
+  </view>
+  
+</view>
+<include src="../footer/footer.wxml"/>

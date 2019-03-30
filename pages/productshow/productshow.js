@@ -28,15 +28,23 @@ Page({
    onLoad: function (options) {
 	var WxParse = require('../../wxParse/wxParse.js');
     var that = this
-	var id  = options.id
 	
-	var oid = ''
+	//产品id
+    if(options.scene){
+	   var id = decodeURIComponent(options.scene)
+    }else{
+		var id  = options.id
+	}
 	
+	//拼团id
+	var oid = 0
 	if(oid == ''){
 		oid = 0
 	}else{
 		oid = options.oid
 	}
+	
+	
 	
     //网络请求 GET方法
     wx.request({
@@ -51,6 +59,7 @@ Page({
       success(res) {
         console.log(res.data);
 		var temp = WxParse.wxParse('content', 'html', res.data.content, that, 5);
+		var temp2 = WxParse.wxParse('message', 'html', res.data.message, that, 5);
         that.setData({
 			gid:res.data.id,
 			oid:oid,
@@ -209,7 +218,6 @@ Page({
 						});
 						return false;
 					}
-					
 			    }
 			})
 		},

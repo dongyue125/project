@@ -1,11 +1,60 @@
-/**product.wxss**/
-.productshow{width: 100%;border-bottom: 5px #f4f4f4 solid;padding: 15px 0;line-height:1.5}
-.productshow text{display: block}
-.topup{width: 100%;overflow: hidden;line-height: 40px;font-size: 14px;padding: 0}
-.topup text{font-size: 16px;float: left;}
-.topup input{float: right;line-height: 40px;height: 40px;text-align: right}
-.topup_tj{width: 100%}
-.topup_tj button{width: 100%;text-align: center;border:0;border-radius: 0;background: #000;line-height: 40px;height: 40px;color: #fff;font-size: 13px}
-.topup_the_rules{background: #fff;padding: 15px;box-sizing:border-box;font-size: 13px;color: #666;line-height: 24px;border-top: 5px #ddd solid;border-bottom: 5px #f4f4f4 solid;}
-.topup_the_rules text{display: block}
-.topup_the_rules text:nth-of-type(1){font-size: 16px;border-bottom: 1px #f4f4f4 solid;padding-bottom: 5px;margin-bottom: 1px;color: #000}
+/**topup.wxss**/
+.topup{
+  padding: 30px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.topup .title{
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 10px;
+  display: block;
+  font-family: "微软雅黑";
+}
+.topup .topup_tj button{
+  background: #000;
+  color: #fff;
+  line-height: 36px;
+  height: 36px;
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.topup .topup_the_rules{
+  font-size: 13px;
+  font-family: "youyuan";
+  color: #666;
+  line-height: 26px;
+}
+.topup .ts{
+  font-size: 14px;
+  color: #c9141d;
+  margin-top: 15px;
+}
+.topup .ys{
+  color: #c9141d;
+}
+.topup .topup_the_rules image{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+.topup .tab{
+  width: calc(50% - 20px);
+  margin: 0 10px;
+  margin-bottom: 20px;
+  float: left;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.topup .tab text{
+  font-size: 13px;
+  font-family: "youyuan";
+  color: #c9141d;
+}
+.topup .active{
+  border-color: #c9141d;
+}

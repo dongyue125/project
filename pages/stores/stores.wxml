@@ -1,14 +1,20 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <view class='yy_nav'>
-      <rich-text class='htz yy_nav_se'>{{classname}}</rich-text>
-      <rich-text class='htz'>干洗服务</rich-text>
-    </view>
-    <text>{{classname}}</text>
-    <text>{{description}}</text>
+  <view class="y-nav y-nav2">
+   <view class="nav1 active" catchtap="showstores">体验店</view>
+   <view class="nav1" catchtap="showwash">干洗服务</view>
   </view>
+
+  <view class='yy yy1'>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+	</view>
+
+  <view class="cont">
     <view class='stores' wx:for="{{list}}" wx:key="{{item.id}}">
       <view class='stores_01'>
         <image src='{{item.picurl}}' mode='widthFix'></image>
@@ -18,7 +24,8 @@
         <video src='{{item.vurl}}' poster='{{item.picurl}}'></video>
       </view>
     </view>
-
-    <view style='height:20px'></view>
+  </view>
+  
 </view>
+
 <include src="../footer/footer.wxml"/>

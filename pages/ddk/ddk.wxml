@@ -2,27 +2,28 @@
 <include src="../header/header.wxml"/>
 <view class="container">
   <view class='yy'>
-    <text>{{classname}}</text>
-    <view>
+    <view class="title1">{{classname}}</view>
+    <view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
-	</view>
-  </view>
-  <view class='consulting_03'>
-    <view class='center'>
-      <view class='consulting_bg'><image src='../../images/ddk_06.jpg' mode='widthFix'></image></view>
     </view>
+	</view>
+  <view class="tu">
+    <image src="../../images/ddk-01.jpg" mode="widthFix"></image>
   </view>
-  <view class='wash'>
-    <view class='center' wx:for="{{plist}}" wx:key="{{item.id}}">
-      <view class='wash_01'>
-        <text>{{item.id}}</text>
-        <view>
-			{{item.content}}
-		</view>
-      </view>
-      <view class='wash_02'>
-        <image src='{{item.picurl}}' mode='widthFix'></image>
+  <view class="tu tu1">
+    <image src="../../images/ddk_07.jpg" mode="widthFix"></image>
+  </view>
+  <view class="dl">
+    <view class="dd" wx:for="{{plist}}">
+      <image src="{{item.picurl}}" mode="widthFix"></image>
+      <view class="wz">
+         <view class="big">{{item.title}}</view>
+			<view class="rich-text">
+			<rich-text nodes="{{item.content}}">
+				{{item.content}}
+			</rich-text>
+			</view>
       </view>
     </view>
   </view>

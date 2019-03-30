@@ -1,12 +1,34 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
+  <view class="y-nav">
+   <view class="nav1" catchtap="showcustom">辽宁职业装设计研发中心</view>
+   <view class="nav1 active" catchtap="showmade">睿朗职业装团体定制</view>
+   <view class="text">
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+	</view>
+  </view>
 
-  <view class='yuyue'>
-    <text class='htz'>请填写预约信息</text>
-    <text>截止今日 已有158人预约</text>
-    <view class='center'>
-      <form bindsubmit="formSubmit">
+  <view class="made">
+    <view class="top"> 
+      <view class="til">定制流程</view>
+      <image src='{{img}}' mode="widthFix"></image>
+    </view>
+    <view class="dl">
+      <view class="dd" wx:for="{{clist}}" wx:key="{{item.id}}">
+        <image src='{{item.picurl}}' mode="widthFix"></image>
+        <view class="wz">
+          <text>{{item.title}}</text>
+          <view>{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="yuyue">
+	 <view class='center'>
+	 <form bindsubmit="formSubmit">
           <view class="field clearfix">
             <input id="name" name="nickname" value="{{nickname}}" class="login-input" type="text" placeholder="请输入姓名" />
             <input id="tel" name="tel" value="{{tel}}" class="login-input" type="text" placeholder="请输入电话" />
@@ -21,14 +43,17 @@
                 bindchange="bindDateChange"
               >
                 <view class="picker">
-                  请选择时间: <text>{{date}}</text>
+                  <text>{{date}}</text>
                 </view>
               </picker>
             </view>
+			
           </view>
           <button class="btn_login"  formType="submit">立即预约</button>
       </form>
-    </view>
+	 
+	 </view>
   </view>
+  
 </view>
 <include src="../footer/footer.wxml"/>

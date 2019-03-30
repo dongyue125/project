@@ -1,59 +1,69 @@
 <!--index.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class="fldz">
-    <view class="fldz_01" catchtap="showdaren">
-      <text class='htz'>{{content}}</text>
-      <text class='gengduo'>更多视频</text>
+<!--丰雷先生-->
+  <view class="fldz" catchtap="showdaren">
+    <view class="title">
+      <text class='h4'>{{classname}}</text>
+      <text class='h6'>{{content}}</text>
     </view>
-    <video src='{{vurl}}' poster='{{vpic}}'></video>
+    <view> <image src='{{vpic}}' mode="widthFix"></image></view>
   </view>
-  <view class='ddk'>
-    <view class='htz ddk_01'>
-    {{dtitle}}
+<!--搭搭看平台-->
+  <view class='ddk' catchtap="showddk">
+    <view class="title">
+      <text class='h4'>{{dtitle}}</text>
+      <text class='h6'>{{dcontent}}</text>
     </view>
-    <view class='ddk_02' catchtap="showddk">
+    <view class='ddk_02'>
       <image src='{{dpic}}' mode="widthFix"></image>
     </view>
   </view>
-  <view class='qysh'>
-    <view class='qysh_01' catchtap="showlife">
-      <image src='{{lpic}}' mode="widthFix"></image>
-      <view class='qyes_text'>
-        <rich-text>{{lname}}</rich-text>
-        <span></span>
-        <text>{{ldescription}}</text>
+<!--2019新品-->
+  <view class="news-product">
+    <view class="title" catchtap="showproductsb">
+      <text class='h4'>2019年春夏新品</text>
+      <text class='h6'>{{newc}}</text>
+    </view>
+    <view class="cont" style='background-image: url({{bimg}})'>
+      <view class="li" wx:for="{{nlist}}" wx:key="{{item.id}}" catchtap="{{item.url}}">
+        <image mode="widthFix" src='{{item.img}}'></image>
+        <text>{{item.ninfo}}</text>
       </view>
     </view>
-    <view class='qysh_01' catchtap="showselection">
-      <image src='{{mpic}}' mode="widthFix"></image>
-      <view class='qyes_text'>
-        <rich-text>{{mname}}</rich-text>
-        <span></span>
-        <text>{{mdescription}}</text>
+  </view>
+<!--职业装定制-->
+<view class="news-product zyzdz">
+   <view class="title" catchtap="showcustom">
+      <text class='h4'>{{zname}}</text>
+      <text class='h6'>{{zinfo}}</text>
+    </view>
+    <view class="cont" style='background-image: url({{zpic}})'>
+      <view class="li" catchtap="showcustom">
+        <view class="bt">{{fname}}</view>
+        <text>{{finfo}}</text>
+      </view>
+      <view class="li" catchtap="showmade">
+         <view class="bt">{{rname}}</view>
+        <text>{{rinfo}}</text>
       </view>
     </view>
-    <view class='qysh_01' catchtap="showstores">
-      <image src='{{spic}}' mode="widthFix"></image>
-      <view class='qyes_text'>
-        <rich-text>{{sname}}</rich-text>
-        <span></span>
-        <text>{{sdescription}}</text>
-      </view>
-    </view>
-    <view class='qysh_02' catchtap="showlife">
-       <text class='htz'>{{hname}}</text>
-       <text class='gengduo'>了解详情</text>
-    </view>
-  </view>
-  <view class='qyzyzdz' catchtap="showcustom">
-    <image src='{{bpic}}' mode="widthFix"></image>
-  </view>
-  <view class='qyzyzdz' catchtap="showcooperation">
-    <image src='{{rpic}}' mode="widthFix"></image>
-  </view>
-  <view class='qyzyzdz' catchtap="showrecruiting">
-    <image src='{{wpic}}' mode="widthFix"></image>
-  </view>
 </view>
+
+
+<!--合作招募-->
+  <view class="hzzp">
+    <view class="li" catchtap="showcooperation">
+      <image src="{{rpic}}" mode="widthFix"></image>
+      <text>资源合作</text>
+    </view>
+    <view class="li" catchtap="showrecruiting">
+      <image src="{{wpic}}" mode="widthFix"></image>
+      <text>穿搭师招募</text>
+    </view>
+    <view class="clearfix"></view> 
+  </view>
+  <view class="btn" catchtap="showlife">更多了解丰雷企业</view>
+</view>
+<!--底部-->
 <include src="../footer/footer.wxml"/>

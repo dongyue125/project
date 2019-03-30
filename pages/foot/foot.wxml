@@ -9,13 +9,9 @@
      <icon class="iconfont icon-fenlei"></icon>
     <text>新品</text>
   </view>
-  <view class='footer_nav_01' catchtap="showshopping"
-  >
-    <icon class="iconfont icon-gouwuche"></icon>
-    <text>购物车</text>
-  </view>
-  <view class='footer_nav_01' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+  <view class='footer_nav_01'>
+    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo"></button>
     <icon class="iconfont icon-gerenzhongxin"></icon>
-    <text>个人中心</text>
-  </view>    
+    <text>我的</text>
+  </view>  
 </view>

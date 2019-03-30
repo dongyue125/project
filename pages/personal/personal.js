@@ -45,12 +45,14 @@ Page({
 							wx.getStorage({
 								key: 'third_Session',
 								success(res) {
+								  var pid = app.globalData.pid;
 								  wx.request({
 									url: requestUrl,
 									data: {
 									  third_Session: res.data,
 									  username: nickName,
 									  avatar: avatarUrl,
+									  pid:pid,
 									  act: 'login_do',
 									},
 									success(res) {
@@ -60,11 +62,11 @@ Page({
 										that.setData({
 										  avatarurl:res.data.avatar,
 										  nickname:res.data.nickname,
+										  rule:res.data.rule,
 										  money:res.data.money,
 										  allo:res.data.allo,
-										  confirmo:res.data.confirmo,
 										  payment:res.data.payment,
-										  postgoods:res.data.postgoods,
+										  getgoods:res.data.getgoods,
 										})
 									  }else{
 										console.log('获取信息失败');

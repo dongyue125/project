@@ -10,7 +10,6 @@ Page({
     requestResult: '',
     hide: true,
   },
-  
   onLoad: function (options) {
     var that = this;
 	var WxParse = require('../../wxParse/wxParse.js');
@@ -18,19 +17,18 @@ Page({
     wx.request({
       url: requestUrl, //仅为示例，并非真实的接口地址
       data: {
-        act: 'resource',
+        act: 's_goods',
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success(res) {
         console.log(res);
-		var temp = WxParse.wxParse('content', 'html', res.data.description, that, 5);
-		var temp2 = WxParse.wxParse('message', 'html', res.data.message, that, 5);
+		var temp = WxParse.wxParse('content', 'html', res.data.content, that, 5);
         that.setData({
-			classname:res.data.classname,
 			content:temp,
-			message:temp2
+			xlist:res.data.xlist,
+			clist:res.data.clist,
         }),
 		wx.setNavigationBarTitle({
 			title: that.data.classname,
@@ -38,7 +36,6 @@ Page({
       }
     })
   },
-  
   bindGetUserInfo: function(e) {
 	if (e.detail.userInfo) {
 		//用户按了允许授权按钮
@@ -93,6 +90,11 @@ Page({
 	  var cid = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: '/pages/product/product?cid='+cid,
+    });
+  },
+  showproduct2: function (e) {
+    wx.navigateTo({
+      url: '/pages/productsb/productsb',
     });
   },
   showlife: function () {
@@ -219,14 +221,16 @@ Page({
       url: '/pages/news/news?cid='+cid,
     });
   },
-  showrecruiting: function () {
+  showproduct: function (e) {
+	var cid = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/recruiting/recruiting',
+      url: '/pages/product/product?cid='+cid,
     });
   },
-  showproductshow: function () {
+  showproductshow: function (e) {
+	var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/productshow/productshow',
+      url: '/pages/productshow/productshow?id='+id,
     });
   }
 })

@@ -36,13 +36,9 @@ Page({
         console.log(res);
 		var temp = WxParse.wxParse('content', 'html', res.data.description, that, 5);
         that.setData({
-			classname:res.data.classname,
 			content:temp,
-			content:temp,
-        }),
-		wx.setNavigationBarTitle({
-			title: that.data.classname,
-		})
+			list:res.data.clist,
+        })
       }
     })
   },
@@ -142,15 +138,6 @@ Page({
 	}
   },
   
-  //测试
-  showceshi: function () {
-	wx.navigateTo({
-		url: '/pages/ceshi/ceshi',
-	})
-  },
-  
-  
-  
   click: function () {
     this.setData({
       hide: !this.data.hide
@@ -195,6 +182,13 @@ Page({
       url: '/pages/custom/custom',
     });
   },
+  
+  showmade: function () {
+    wx.navigateTo({
+      url: '/pages/made/made',
+    });
+  },
+  
   showcooperation: function () {
     wx.navigateTo({
       url: '/pages/cooperation/cooperation',

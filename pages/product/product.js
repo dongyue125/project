@@ -27,9 +27,11 @@ Page({
       success(res) {
         console.log(res);
 		var temp = WxParse.wxParse('content', 'html', res.data.message, that, 5);
+		var temp2 = WxParse.wxParse('info', 'html', res.data.content, that, 5);
         that.setData({
 			cid:res.data.cid,
 			classname:res.data.classname,
+			info:res.temp2,
 			content:temp,
 			list:res.data.clist,
 			alist:res.data.alist,
@@ -96,6 +98,13 @@ Page({
       url: '/pages/product/product?cid='+cid,
     });
   },
+  
+  showproduct2: function (e) {
+    wx.navigateTo({
+      url: '/pages/productsb/productsb',
+    });
+  },
+  
   showlife: function () {
     wx.navigateTo({
       url: '/pages/life/life',

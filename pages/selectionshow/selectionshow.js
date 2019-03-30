@@ -27,10 +27,10 @@ Page({
       },
       success(res) {
         console.log(res);
-		var temp = WxParse.wxParse('content', 'html', res.data.description, that, 5);
+		var temp = WxParse.wxParse('message', 'html', res.data.description, that, 5);
         that.setData({
 			classname:res.data.classname,
-			content:temp,
+			message:temp,
 			title:res.data.title,
 			picurl:res.data.picurl,
 			content:res.data.content,

@@ -29,7 +29,10 @@ Page({
         that.setData({
 			classname:res.data.classname,
 			content:temp,
+			name:res.data.name,
+			img:res.data.img,
 			list:res.data.rlist,
+			tlist:res.data.tlist,
         }),
 		wx.setNavigationBarTitle({
 			title: that.data.classname,

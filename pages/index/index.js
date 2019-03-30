@@ -13,6 +13,14 @@ Page({
   
   onLoad: function (options) {
     var that = this
+	
+	if(options.pid){
+		var pid = options.pid
+	}else{
+		var pid = 0
+	}
+	app.globalData.pid = pid
+	
     //网络请求 GET方法
     wx.request({
       url: requestUrl, //仅为示例，并非真实的接口地址
@@ -25,22 +33,26 @@ Page({
       success(res) {
         console.log(res),
         that.setData({
+		  classname:res.data.classname,
           content:res.data.content,
-		  vurl:res.data.vurl,
 		  vpic:res.data.picurl,
 		  dtitle:res.data.ddk_title,
+		  dcontent:res.data.ddk_description,
 		  dpic:res.data.ddk_pic,
-		  lname:res.data.live_name,
-		  lpic:res.data.live_picurl,
-		  ldescription:res.data.live_description,
-		  mname:res.data.m_name,
-		  mpic:res.data.m_picurl,
-		  mdescription:res.data.m_description,
-		  sname:res.data.s_name,
-		  spic:res.data.s_picurl,
-		  sdescription:res.data.s_description,
-		  hname:res.data.h_name,
-		  bpic:res.data.bpic,
+		  newc:res.data.new_content,
+		  bimg:res.data.bimg,
+		  nlist:res.data.newp,
+		  
+		  
+		  zname:res.data.z_name,
+		  zinfo:res.data.z_info,
+		  zpic:res.data.z_pic,
+		  
+		  fname:res.data.fname,
+		  finfo:res.data.finfo,
+		  rname:res.data.rname,
+		  rinfo:res.data.rinfo,
+		  
 		  rpic:res.data.rpic,
 		  wpic:res.data.wpic,
         })
@@ -60,13 +72,6 @@ Page({
 		//用户按了拒绝按钮
 		console.log('用户拒绝了授权！');
 	}
-  },
-  
-  //测试
-  showceshi: function () {
-	wx.navigateTo({
-		url: '/pages/ceshi/ceshi',
-	})
   },
   
   
@@ -230,5 +235,14 @@ Page({
     });
   },
   
-  
+  showmade: function () {
+    wx.navigateTo({
+      url: '/pages/made/made',
+    })
+  },
+  showproductsb: function () {
+    wx.navigateTo({
+      url: '/pages/productsb/productsb',
+    })
+  },
 });

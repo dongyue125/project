@@ -1,6 +1,7 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
+  
   <view class="swiper-container">
         <swiper class="swiper_box" 
             indicator-dots="{{indicatorDots}}"
@@ -10,16 +11,16 @@
             bindchange="swiperchange">
             <block wx:for="{{banners}}" wx:key="1">
                 <swiper-item>
-                    <image data-id="{{item.businessId}}" src="{{item}}" class="slide-image"/>
+                    <image data-id="{{item.businessId}}" src="{{item}}" class="slide-image" mode="widthFix"/>
                 </swiper-item>
             </block>
         </swiper> 
    </view>
    <view class='productshow productshow_01'>
     <view class='center'>
-      <text>￥{{price}}</text>
-      <text>{{title}}</text>
-      <text>月销量：{{sales}}件</text>
+	<text>{{title}}</text>
+    <text>￥{{price}}</text>
+    <text>月销量：{{sales}}件</text>
     </view>
    </view>
    <view class='productshow productshow_02'>
@@ -83,10 +84,6 @@
     <icon class="iconfont icon-goumai"></icon>
     <text>立即购买</text>
   </view>
-  <view class='footer_nav_01' catchtap="addcart" data-id="{{gid}}" data-current="cart">
-     <icon class="iconfont icon-gouwuche"></icon>
-    <text>加入购物车</text>
-  </view>
   <view class='footer_nav_01' catchtap="addcart" data-id="{{gid}}" data-current="group">
      <icon class="iconfont icon-pintuan"></icon>
     <text>立即拼团</text>
@@ -95,8 +92,9 @@
     <icon class="iconfont icon-yuyue"></icon>
     <text>预约到店</text>
   </view> 
-	<button class='footer_nav_01' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+	<view class='footer_nav_01'>
+    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo"></button>
     <icon class="iconfont icon-gerenzhongxin"></icon>
     <text>个人中心</text>
-  </button>   
+  </view>   
 </view>

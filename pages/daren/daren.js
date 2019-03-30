@@ -11,7 +11,7 @@ Page({
     hide: true,
   },
   onLoad: function (options) {
-	  var WxParse = require('../../wxParse/wxParse.js');
+	var WxParse = require('../../wxParse/wxParse.js');
     var that = this;
     //网络请求 GET方法
     wx.request({

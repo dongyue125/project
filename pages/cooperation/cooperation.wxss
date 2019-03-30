@@ -1,5 +1,19 @@
 /**product.wxss**/
-.cooperation{margin-bottom: 20px}
-.cooperation .cooperation_01{background: #000;color: #fff;padding: 15px;box-sizing:border-box;margin-top: 15px}
-.cooperation .cooperation_01 text{font-size: 13px;line-break: 30px;}
-.cooperation .cooperation_01 text:nth-of-type(1){font-size: 26px;text-align: center;display: block}
+.wz view{
+  text-align: center;
+ 
+   font-size: 14px !important;
+   line-height:26px;
+  font-family: "youyuan";
+  color: #555;
+}
+.wz {
+  text-align: center;
+  padding: 25px 15px;
+
+}
+.wz text{
+  font-size: 18px;
+  font-family: "youyuan";
+  color: #555;
+}

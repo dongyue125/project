@@ -16,7 +16,7 @@ var config = {
     //loginUrl: `https://${host}/login`,
 
     // 测试的请求地址，用于测试会话
-    requestUrl: `https://${host}/WebsiteApi.php`
+    requestUrl: `https://${host}/WebsiteApi2.php`
 
     // 用code换取openId
     //openIdUrl: `https://${host}/openid`,

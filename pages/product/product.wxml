@@ -1,23 +1,30 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  <view class='yy'>
-    <view class='yy_nav'>
-      <rich-text wx:for="{{alist}}" wx:key="{{item.catid}}" catchtap="showproduct" data-id="{{item.catid}}" class='{{item.catid==cid ? "htz yy_nav_se" : ""}}'>{{item.cname}}</rich-text>
-    </view>
-    <text>{{classname}}</text>
-    <view>
+  <view class="y-nav">
+   <view class="nav1" catchtap="showproduct2">商务标配</view>
+   <view class="nav1 active" catchtap="showproduct" data-id="11">2019春夏新品</view>
+	<view class="text">
+		<import src="../../wxParse/wxParse.wxml"/>
+		<template is="wxParse" data="{{wxParseData:info.nodes}}"/>
+	</view>
+  </view>
+  <view class="y-nav y-nav1">
+   <view wx:for="{{alist}}" wx:key="{{item.catid}}" class="nav1 {{item.catid==cid ? 'active' : ''}}" catchtap="showproduct" data-id="{{item.catid}}">{{item.cname}}</view>
+  </view>
+  <view class='yy yy1'>
+    <view class="title1">{{classname}}</view>
+	<view class="text">
 		<import src="../../wxParse/wxParse.wxml"/>
 		<template is="wxParse" data="{{wxParseData:content.nodes}}"/>
 	</view>
-  </view>
+	</view>
   <view class='product'>
-
     <view class='product_01' wx:for="{{list}}" wx:key="{{item.id}}" catchtap='showproductshow' data-id="{{item.id}}">
       <image src='{{item.picurl}}' mode="widthFix"></image>
       <view class='product_02'>
         <rich-text>{{item.title}}</rich-text>
-        <text>￥{{item.price}}</text><text>688人付款</text>
+        <text>{{item.description}}</text>
       </view>
     </view>
   </view>

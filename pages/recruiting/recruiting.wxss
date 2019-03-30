@@ -1,4 +1,15 @@
 /**product.wxss**/
-.recruiting{margin-bottom: 20px}
-.recruiting text{font-size: 13px;line-height: 24px;color: #666}
-.recruiting .recruiting_01{font-size: 20px;display: block;margin-top: 15px;color: #000}
+.dl{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.dd{
+  margin-bottom: 15px;
+  background: #eee;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #444;
+  font-family: "youyuan";
+}
