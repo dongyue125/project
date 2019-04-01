@@ -6,17 +6,22 @@
 	
 	
     <view class="tab {{money=='20000' ? 'active' :''}}" catchtap="bindmoney" data-current="20000">
-      <view class="xz">2个钻领</view>
-	  <text>20000元</text>
+	  <view class="xz">
+        <image src='../../images/icon-zl.png' mode="widthFix"></image>
+        <image src='../../images/icon-zl.png' mode="widthFix"></image>
+      </view>
+      <view class="ts">20000元</view>
     </view>
-	
-	
     <view class="tab {{money=='50000' ? 'active' :''}}" catchtap="bindmoney" data-current="50000">
-      <view class="xz">5个钻领</view>
-	  <text>50000元</text>
+      <view class="xz">
+          <image src='../../images/icon-zl.png' mode="widthFix"></image>
+          <image src='../../images/icon-zl.png' mode="widthFix"></image>
+          <image src='../../images/icon-zl.png' mode="widthFix"></image>
+          <image src='../../images/icon-zl.png' mode="widthFix"></image>
+          <image src='../../images/icon-zl.png' mode="widthFix"></image>
+      </view>
+      <view class="ts">50000元</view>
     </view>
-	
-	
     <view class="clearfix"></view>
     <view class='topup_tj'>
       <button form-type="submit" catchtap="recharge">拥有钻领</button>

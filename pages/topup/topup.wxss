@@ -50,11 +50,14 @@
   text-align: center;
   box-sizing: border-box;
 }
-.topup .tab text{
+.topup .tab .ts{
   font-size: 13px;
   font-family: "youyuan";
   color: #c9141d;
 }
 .topup .active{
   border-color: #c9141d;
+}
+.topup .xz image{
+  width: 16px;
 }

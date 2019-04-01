@@ -13,8 +13,7 @@
 
   <view class='productshow the_order'>
     <text catchtap="showorder" data-current="all">查看历史（{{allo}}）</text>
-    <text catchtap="showorder" data-current="payment">定制中（{{payment}}）</text>
-	<text catchtap="showorder" data-current="getgoods">已到手（{{getgoods}}）</text>
+    <text catchtap="showorder" data-current="payment">未到手{{payment}}）</text>
   </view>
   <view class='productshow productshow_03' catchtap="grouporder" data-current="group">
     <view class='center'>

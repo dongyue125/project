@@ -225,7 +225,7 @@ Page({
 			wx.showModal({
 				title: '提示',
 				showCancel: false,
-				content: '请点击我的授权登录！',
+				content: '请点击个人中心授权登录！',
 			});
 		  return false;
 		}
