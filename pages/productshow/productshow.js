@@ -4,7 +4,7 @@ const requestUrl = require('../../config').requestUrl
 Page({
   data: {
     banners: '',
-    indicatorDots: false,
+    indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
@@ -13,6 +13,10 @@ Page({
     num: 1,
 	
 	oid:'',
+	
+	gid:'',
+	
+	price:'',
 	
 	//选择面料*/
 	fid:'1',
@@ -121,11 +125,29 @@ Page({
   
   /*选择面料*/
   selectfrabic : function (e){
-	  var fid = e.currentTarget.dataset.id;
-	  console.log(fid);
-	  this.setData({
+	var that = this;
+	var fid = e.currentTarget.dataset.id;
+	var gid = this.data.gid;
+	console.log(fid,gid);
+	//网络请求 GET方法
+    wx.request({
+      url: requestUrl, //仅为示例，并非真实的接口地址
+      data: {
+        act: 'select_fabric',
 		fid: fid,
-	  });
+		gid: gid,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data);
+		that.setData({
+			fid: fid,
+			price:res.data.price,
+		});
+      }
+    })
   },
   
   /*选择尺寸*/

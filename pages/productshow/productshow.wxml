@@ -1,14 +1,12 @@
 <!--daren.wxml-->
 <include src="../header/header.wxml"/>
 <view class="container">
-  
   <view class="swiper-container">
         <swiper class="swiper_box" 
             indicator-dots="{{indicatorDots}}"
             autoplay="{{autoplay}}"
             interval="{{interval}}"
-            duration="{{duration}}"
-            bindchange="swiperchange">
+            duration="{{duration}}">
             <block wx:for="{{banners}}" wx:key="1">
                 <swiper-item>
                     <image data-id="{{item.businessId}}" src="{{item}}" class="slide-image" mode="widthFix"/>
@@ -49,6 +47,14 @@
     </view>
    </view>
    
+   <view class='productshow productshow_04'>
+    <view class='center'>
+      <text>成衣尺码对照表</text>
+      <view class='fabric'>
+        <image src='../../images/cy_size.png' mode="widthFix" title="成衣尺码对照表"></image>
+      </view>
+    </view>
+   </view>
    
    
    <view class='productshow productshow_06'>
@@ -88,6 +94,7 @@
      <icon class="iconfont icon-pintuan"></icon>
     <text>立即拼团</text>
   </view>
+  
   <view class='footer_nav_01' catchtap="showsubscribe">
     <icon class="iconfont icon-yuyue"></icon>
     <text>预约到店</text>

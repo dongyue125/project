@@ -70,7 +70,7 @@ Page({
 		console.log('用户点击了右上角分享按钮');
 	}
     return {
-      title: '分享',
+      title: '我在丰雷定制拼团买了一件衣服，非常好看！赶快来拼团哦',
       path: '/pages/productshow/productshow?id=' + this.data.gid+'&oid='+this.data.oid,
 	  imageUrl:this.data.picurl,
       success: function (res) {

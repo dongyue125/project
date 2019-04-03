@@ -26,7 +26,7 @@
       <text class='h6'>{{newc}}</text>
     </view>
     <view class="cont" style='background-image: url({{bimg}})'>
-      <view class="li" wx:for="{{nlist}}" wx:key="{{item.id}}" catchtap="{{item.url}}">
+      <view class="li" wx:for="{{nlist}}" wx:key="{{item.id}}" catchtap="{{item.url}}" data-id="{{item.catid}}">
         <image mode="widthFix" src='{{item.img}}'></image>
         <text>{{item.ninfo}}</text>
       </view>

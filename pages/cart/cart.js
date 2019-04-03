@@ -65,7 +65,7 @@ Page({
 			wx.showModal({
 			title: '提示',
 			showCancel: false,
-			content: '请点击我的授权登录',
+			content: '请点击个人中心授权登录',
 		  });
 		  return false;
 		}
@@ -404,6 +404,7 @@ Page({
 		});
 		return false;
     }else {
+		console.log(totalPrice);
       wx.navigateTo({
         url: '/pages/buycart/buycart?cart='+cart+'&total='+totalPrice,
       })

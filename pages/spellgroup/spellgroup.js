@@ -26,6 +26,7 @@ Page({
 	getime:'',
 	
 	oid:'',
+	fid:'',
 	
     hide: true,
     // input默认是1  
@@ -79,6 +80,7 @@ Page({
 				console.log(res),
 				that.setData({
 					gid:res.data.gid,
+					fid:res.data.fid,
 					oid:res.data.oid,
 					title:res.data.title,
 					description:res.data.description,
@@ -113,6 +115,7 @@ Page({
   bindMinus: function (e) {
 	var that = this;
 	var gid = e.currentTarget.dataset.id;
+	var fid = that.data.fid;
 	var cate = e.currentTarget.dataset.current;
 	console.log(gid);
     var num = this.data.num;
@@ -130,6 +133,7 @@ Page({
         act: 'math',
 		num: num,
 		gid:gid,
+		fid:fid,
 		cate:cate,
       },
       header: {
@@ -149,6 +153,7 @@ Page({
   bindPlus: function (e) {
 	var that = this;
 	var gid = e.currentTarget.dataset.id;
+	var fid = that.data.fid;
 	var cate = e.currentTarget.dataset.current;
 	
 	console.log(gid);
@@ -165,6 +170,7 @@ Page({
         act: 'math',
 		num: num,
 		gid:gid,
+		fid:fid,
 		cate:cate,
       },
       header: {
@@ -202,7 +208,8 @@ Page({
 	var amount = e.currentTarget.dataset.current;
 	var num = e.currentTarget.dataset.num;
 	var size = that.data.size;
-	var fabric = that.data.fabric;
+	//var fabric = that.data.fabric;
+	var fabric = that.data.fid;
 	  //网络请求 GET方法
 	wx.getStorage({
 		key: 'third_Session',
