@@ -5,7 +5,7 @@ Page({
   data: {
     banners: '',
     indicatorDots: true,
-    autoplay: true,
+    autoplay: false,
     interval: 5000,
     duration: 1000,
     hide: true,
