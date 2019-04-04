@@ -62,6 +62,13 @@ Page({
       url: '/pages/cooperation/cooperation',
     });
   },
+  
+  showstores: function () {
+    wx.navigateTo({
+      url: '/pages/stores/stores',
+    });
+  },
+  
   showrecruiting: function () {
     wx.navigateTo({
       url: '/pages/recruiting/recruiting',

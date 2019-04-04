@@ -91,6 +91,11 @@ Page({
       url: '/pages/recommended/recommended',
     });
   },
+  showstores: function () {
+    wx.navigateTo({
+      url: '/pages/stores/stores',
+    });
+  },
   showhistory: function () {
     wx.navigateTo({
       url: '/pages/history/history',

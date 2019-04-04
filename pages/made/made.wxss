@@ -51,6 +51,9 @@
   box-sizing: border-box;
   line-height: 36px;
   height: 36px;
+  padding-left: 20rpx;
+  margin-bottom: 20rpx;
+  border: 2rpx solid #ddd;
 }
 .yuyue button{
   font-size: 14px;

@@ -5,6 +5,7 @@
    <view class="nav1 active" catchtap="showlife">企业生活</view>
    <view class="nav1" catchtap="showselection">丰雷先生评选</view>
    <view class="nav1" catchtap="showhistory">23年的我们</view>
+   <view class="nav1" catchtap="showstores">服务体验店</view>
   </view>
   <view class='yy yy1'>
     <view class="title1">{{classname}}</view>
