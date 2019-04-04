@@ -99,6 +99,9 @@ Page({
     var minusStatus = num <= 1 ? 'disabled' : 'normal';
 	
 	 //网络请求 GET方法
+	 wx.getStorage({
+		key: 'third_Session',
+		success(res) {
     wx.request({
       url: requestUrl, //仅为示例，并非真实的接口地址
       data: {
@@ -106,6 +109,7 @@ Page({
 		num: num,
 		gid:gid,
 		fid:that.data.fid,
+		session:res.data,
 		cate:cate,
       },
       header: {
@@ -120,6 +124,11 @@ Page({
         })
       }
     })
+	
+	}
+	})
+	
+	
   },
   
   /* 点击加号 */
@@ -135,6 +144,10 @@ Page({
     var minusStatus = num < 1 ? 'disabled' : 'normal';
 	
 	 //网络请求 GET方法
+	 wx.getStorage({
+		key: 'third_Session',
+		success(res) {
+	 
     wx.request({
       url: requestUrl, //仅为示例，并非真实的接口地址
       data: {
@@ -142,6 +155,7 @@ Page({
 		num: num,
 		gid:gid,
 		fid:that.data.fid,
+		session:res.data,
 		cate:cate,
       },
       header: {
@@ -156,6 +170,10 @@ Page({
         })
       }
     })
+	
+		}
+	 })
+	
   },
   
   
