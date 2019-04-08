@@ -36,24 +36,4 @@
   </view>
 </view>
 
-<view style='height:54px'></view>
-
-<view class='footer_nav'>
-  <view class='footer_nav_01'bindtap="showindex">
-    <icon class="iconfont icon-shouye"></icon>
-    <text>首页</text>
-  </view>
-  <view class='footer_nav_01'>
-    <icon class="iconfont icon-design"></icon>
-    <text>上门量体</text>
-  </view>
-  <view class='footer_nav_01'>
-    <icon class="iconfont icon-yuyue"></icon>
-    <text>预约到店</text>
-  </view>
-  <view class='footer_nav_01'>
-    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo"></button>
-    <icon class="iconfont icon-gerenzhongxin"></icon>
-    <text>我的</text>
-  </view> 
-</view>
+<include src="../footer/footer.wxml"/>
