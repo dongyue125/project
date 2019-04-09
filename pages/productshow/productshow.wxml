@@ -25,7 +25,7 @@
       <view class="jg">
         <view class="yj">原价：￥<text>{{old_price}}</text></view>
         <view>现价：￥<text>{{price}}</text></view>
-        <view>（{{remit}}）</view>
+		<view wx:if="{{cid!=90 && cid!=91}}">（{{remit}}）</view>
       </view>
       <view class="xl">
         <view>月销量：<text>{{sales}}</text></view>

@@ -16,6 +16,8 @@ Page({
 	
 	gid:'',
 	
+	cid:'',
+	
 	price:'',
 	
 	//选择面料*/
@@ -67,6 +69,7 @@ Page({
         that.setData({
 			gid:res.data.id,
 			oid:oid,
+			cid:res.data.cid,
 			title:res.data.title,
 			description:res.data.description,
 			old_price:res.data.old_price,
