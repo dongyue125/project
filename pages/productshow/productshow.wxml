@@ -14,13 +14,27 @@
             </block>
         </swiper> 
    </view>
+   
    <view class='productshow productshow_01'>
     <view class='center'>
-	<text>{{title}}</text>
-    <text>￥{{price}}</text>
-    <text>月销量：{{sales}}件</text>
+      <view class="title7">
+        <text>{{title}}
+          成衣编码：{{description}}		
+        </text> 
+      </view>
+      <view class="jg">
+        <view class="yj">原价：￥<text>{{old_price}}</text></view>
+        <view>现价：￥<text>{{price}}</text></view>
+        <view>（{{remit}}）</view>
+      </view>
+      <view class="xl">
+        <view>月销量：<text>{{sales}}</text></view>
+        <view>年销量：<text>{{ysales}}</text></view>
+      </view>
     </view>
    </view>
+   
+   
    <view class='productshow productshow_02'>
     <view class='center'>
       <text>服务：</text>
