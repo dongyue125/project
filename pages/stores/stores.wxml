@@ -17,7 +17,7 @@
   <view class="cont">
     <view class='stores' wx:for="{{list}}" wx:key="{{item.id}}">
       <view class='stores_01'>
-        <image src='{{item.picurl}}' mode='widthFix'></image>
+        <image src='{{item.content}}' mode='widthFix'></image>
         <text class='htz'>{{item.title}}</text>
       </view>
       <view class='stores_02'>
