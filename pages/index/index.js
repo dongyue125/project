@@ -11,7 +11,7 @@ Page({
     hide: true,
   },
   
-  onLoad: function (options) {
+  onLoad: function (options){
     var that = this
 	
 	if(options.pid){

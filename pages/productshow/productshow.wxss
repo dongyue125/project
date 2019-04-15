@@ -34,6 +34,14 @@ swiper-item image {
 .productshow_05 .size .size_se{background: #cf0f11;color: #fff}
 .productshow_06{padding:2px 0}
 .number{float: left;font-size: 12px;color: #acacac;line-height: 30px}
+
+
+.head_portrait .center{display: flex;padding:0 15px;margin-top:10px;}
+.head_portrait image{width: 40px;height: 40px;border-radius: 22px;overflow: hidden;border: 2px #ddd solid;}
+.head_portrait_01{flex: 1;padding-left: 15px}
+.head_portrait_01 text:nth-of-type(1){font-size: 14px;display: block;padding-top: 15px}
+.pt{margin-left:200px;float:left;margin-top:-25px;font-size:14px;}
+
 /*主容器*/  
 .stepper {  
     width: 90px;

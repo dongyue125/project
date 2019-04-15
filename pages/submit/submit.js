@@ -91,6 +91,9 @@ Page({
 				'paySign': res.data.paySign,
 				'success':function(res){
 					console.log('支付成功');
+					wx.navigateTo({
+						url: '/pages/pay/pay',
+					});
 				},
 				'fail':function(res){
 					console.log('支付失败！');
@@ -104,13 +107,5 @@ Page({
 		
 	  }
 	})
-	
-	  
-	  
-	  /*
-	  wx.navigateTo({
-		url: '/pages/pay/pay?oid='+oid,
-	  });
-	  */
   }
 })

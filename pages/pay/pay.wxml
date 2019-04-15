@@ -3,17 +3,10 @@
 <view class="container">
   <view class='productshow pay'>
     <image src='../../images/pay_03.jpg' mode='widthFix'></image>
-    <text>恭喜您，下单成功，我们将在12小时内发货！</text>
+    <text>恭喜您，下单成功！</text>
   </view>
-
-  <view class='productshow productshow_02'>
-    <view class='center'>
-      <text>会员卡余额</text>
-      <text>￥9 5000.00</text>
-    </view>
-   </view>
-
 </view>
-<view class='querzf'>
+<view class='querzf' catchtap="showorder" data-current="all">
   查看订单
 </view>
+<include src="../footer/footer.wxml"/>
