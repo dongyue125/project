@@ -183,7 +183,11 @@ Page({
 	var gid = e.currentTarget.dataset.id;
 	var str = e.currentTarget.dataset.current;
 	
-	var oid = that.data.oid;
+	if(e.currentTarget.dataset.oid){
+		var oid = e.currentTarget.dataset.oid;
+	}else{
+		var oid = that.data.oid;
+	}
 	
 	console.log(oid);
 	

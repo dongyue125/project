@@ -225,6 +225,8 @@ Page({
 	
 	var oid = that.data.oid;
 	
+	console.log(oid);
+	
 	var amount = e.currentTarget.dataset.current;
 	var num = e.currentTarget.dataset.num;
 	var size = that.data.size;

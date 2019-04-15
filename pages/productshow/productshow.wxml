@@ -46,7 +46,7 @@
 	   <view class='center' wx:for="{{olist}}" wx:key="1" wx:if="{{item.count >0}}">
 			<image src='{{item.avatar}}'></image>
 			<view class='head_portrait_01'>
-				<text>{{item.username}} 发起了拼团，还差{{item.count}}人成团</text><button class="pt" catchtap="showproductshow" data-id="{{gid}}" data-current="{{item.oid}}">参与拼团</button>
+				<text>{{item.username}} 发起了拼团，还差{{item.count}}人成团</text><button class="pt" catchtap="addcart" data-id="{{gid}}" data-current="group" data-oid="{{item.oid}}">参与拼团</button>
 			</view>
       </view>
 	  
