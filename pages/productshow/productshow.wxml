@@ -44,11 +44,14 @@
    
    <view class='productshow head_portrait' wx:if="{{groupwarn==true}}">
 	   <view class='center' wx:for="{{olist}}" wx:key="1" wx:if="{{item.count >0}}">
-			<image src='{{item.avatar}}'></image>
-			<view class='head_portrait_01'>
-				<text>{{item.username}} 发起了拼团，还差{{item.count}}人成团</text><button class="pt" catchtap="addcart" data-id="{{gid}}" data-current="group" data-oid="{{item.oid}}">参与拼团</button>
-			</view>
+      <view class="li-group">
+        <image src='{{item.avatar}}' mode='widthFix'></image>
+        <view class='h4'>
+          <view class="text">{{item.username}} 发起了拼团，还差 <view>{{item.count}}</view>人成团</view>
+          <button class="pt7" catchtap="addcart" data-id="{{gid}}" data-current="group" data-oid="{{item.oid}}">参与拼团</button>
+        </view>
       </view>
+     </view>
 	  
    </view>
    

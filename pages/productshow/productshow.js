@@ -41,7 +41,7 @@ Page({
 	
 	//产品id
     if(options.scene){
-	   var id = decodeURIComponent(options.scene)
+		var id = decodeURIComponent(options.scene)
     }else{
 		var id  = options.id
 	}
@@ -97,7 +97,25 @@ Page({
       }
     })
   },
-  
+  /*
+  onShow: function(e){
+	var that = this;
+	var num = 1;
+	var a = setInterval(function () { 
+		if (getCurrentPages().length != 0) {
+			//刷新当前页面的数据
+			getCurrentPages()[getCurrentPages().length - 1].onLoad()
+		}
+		num++;
+		console.log(num);
+		//循环执行代码 
+		//if(num==100)
+		//{ 
+		//	clearInterval(a); 
+		//} 
+	}, 1000)
+  },
+  */
   
   /* 点击减号 */
   bindMinus: function () {

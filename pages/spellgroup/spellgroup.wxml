@@ -34,8 +34,8 @@
       <text>{{desription}}</text>
       <text>面料：{{fabric}}    尺码：{{size}}</text>
       <view class='buy_price'>
-        <text>￥{{price}}</text>
-        <text></text>
+        <text>原件：￥{{old_price}}</text>
+        <view><text>现价：</text>￥{{price}}</view>
       </view>
     </view>
   </view>

@@ -87,6 +87,7 @@ Page({
 					picurl:res.data.picurl,
 					amount:res.data.price,
 					price:res.data.price,
+					old_price:res.data.old_price,
 					fabric:res.data.fabric,
 					size:res.data.size,
 					
