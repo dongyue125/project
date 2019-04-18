@@ -15,7 +15,7 @@
           <text>面料：{{item.fabric}}  尺码：{{item.size}}</text>
           <view class='buy_price'>
             <text>￥{{item.amount}}</text>
-            <text></text>
+            <text>{{item.sign}}</text>
           </view>
         </view>
       </view>

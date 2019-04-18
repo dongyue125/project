@@ -39,6 +39,8 @@ Page({
     var that = this
 	
 	var oid = options.oid
+	
+	console.log(oid)
 	var gid  = options.gid
 	var num = options.num
 	var fid = options.fid

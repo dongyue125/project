@@ -62,7 +62,7 @@ Page({
   
   
   bindGetUserInfo: function(e) {
-	if (e.detail.userInfo) {
+	if (e.detail.userInfo){
 		//用户按了允许授权按钮
 		console.log(e.detail.userInfo);
 		wx.navigateTo({

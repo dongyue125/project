@@ -16,7 +16,7 @@ Page({
   },
   
   
-  onLoad: function (options) {
+  onLoad: function (options){
 		var that = this
 		 wx.getUserInfo({
 			success(res) {
@@ -57,7 +57,6 @@ Page({
 									},
 									success(res) {
 										console.log(res.data);
-							
 									  if(res.data.msg=='success') {
 										that.setData({
 										  avatarurl:res.data.avatar,

@@ -39,7 +39,6 @@ Page({
 				"Content-Type": "application/x-www-form-urlencoded"
 			  },
 			  success(res) {
-				
 				if(res.data.error=='fail'){
 					wx.showModal({
 						title: '提示',
@@ -55,8 +54,6 @@ Page({
 						picurl:res.data.picurl,
 					})
 				}
-				
-				
 			  }
 			})
 		}

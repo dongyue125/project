@@ -53,8 +53,6 @@ Page({
 		var oid = 0
 	}
 	
-	console.log(oid);
-	
 	
     //网络请求 GET方法
     wx.request({
@@ -68,7 +66,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
-        console.log(res.data);
+        console.log(res.data.oid);
 		var temp = WxParse.wxParse('content', 'html', res.data.content, that, 5);
 		var temp2 = WxParse.wxParse('message', 'html', res.data.message, that, 5);
         that.setData({
@@ -218,6 +216,7 @@ Page({
 	
 	
     //网络请求 GET方法
+
 	wx.getStorage({
 		key: 'third_Session',
 		success(res) {
@@ -292,6 +291,7 @@ Page({
 		  return false;
 		}
 	})
+
   },
   
   showspellgroup: function () {
